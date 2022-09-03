@@ -1,0 +1,44 @@
+name: deploy
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Node.js v16.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: '16.x'
+
+      - name: Install
+        run: yarn install
+
+      - name: Build
+        run: yarn build
+        env:
+          BASE_URL: ${{ secrets.VITE_BASE }}
+          HOSTNAME: ${{ secrets.HOSTNAME }}
+
+      - name: deploy
+        run: |
+          cd dist
+          [ -f 404.html ] || ln -s index.html 404.html
+          if [ "none" !=  "$cname" ]; then echo "$cname" > CNAME; fi
+          git config --global user.name "$user_name"
+          git config --global user.email "$user_email"
+          git init
+          git add -A
+          git commit -m "${{ github.event.head_commit.message }}"
+          git push -f https://_:"$token"@github.com/${{ github.event.repository.full_name }}.git master:gh-pages
+        shell: bash
+        env:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          user_name: GitHub Action
+          user_email: action@github.com
+          cname: none
