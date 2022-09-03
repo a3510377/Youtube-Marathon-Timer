@@ -128,5 +128,5 @@ dist
 
 .vite-ssg-temp
 
-catch-*.json
-data/*
+data.json
+tmp
