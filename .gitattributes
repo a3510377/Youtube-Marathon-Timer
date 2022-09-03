@@ -1,3 +1,2 @@
 * text=auto eol=lf
-.stylelintrc.js linguist-detectable=false
-.eslintrc.js linguist-detectable=false
+*.js linguist-detectable=false

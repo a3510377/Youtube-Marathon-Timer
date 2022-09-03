@@ -127,3 +127,6 @@ dist
 .pnp.*
 
 .vite-ssg-temp
+
+catch-*.json
+data/*
