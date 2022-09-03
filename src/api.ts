@@ -1,3 +1,4 @@
+import fs from "fs";
 import axios from "axios";
 import EventEmitter from "events";
 import { fetchLivePage } from "youtube-chat/dist/requests";
@@ -23,17 +24,27 @@ export class LiveChat extends EventEmitter {
   public liveId?: string;
   protected observer?: NodeJS.Timer;
   protected options?: FetchOptions;
+  protected oneData?: boolean;
 
   public constructor(url: string, protected readonly interval = 1000) {
     super();
+
+    const [, channelId, liveId] =
+      url.match(
+        /^https?:\/\/(?:www\.)?youtube\.com\/(?:channel\/([^/]+)|watch\?v=([^/]+))$/
+      ) || [];
+
+    this.start(channelId ? { channelId } : { liveId });
   }
 
-  public async start(): Promise<boolean> {
+  public async start(
+    id: { channelId: string } | { liveId: string }
+  ): Promise<boolean> {
     if (this.observer) return false;
 
     try {
       // TODO
-      const options = await fetchLivePage({ liveId: "" });
+      const options = await fetchLivePage(id);
       this.liveId = options.liveId;
       this.options = options;
 
@@ -64,6 +75,12 @@ export class LiveChat extends EventEmitter {
       return;
     }
 
+    const data = await this.getChat(this.options);
+    this.oneData ||= true;
+    this.options.continuation = data.continuation;
+    //   chatItems.forEach((chatItem) => this.emit("chat", chatItem));
+    console.log(data);
+
     // try {
     //   const [chatItems, continuation] = await fetchChat(this.#options);
     //   chatItems.forEach((chatItem) => this.emit("chat", chatItem));
@@ -86,6 +103,16 @@ export class LiveChat extends EventEmitter {
       })
       .then(({ data }): GetLiveChatResponse => data);
 
-    data.continuationContents.liveChatContinuation.continuations;
+    fs.writeFileSync("data.json", JSON.stringify(data, null, 2));
+
+    const [continuationData] =
+      data.continuationContents.liveChatContinuation.continuations;
+
+    const continuation =
+      continuationData.invalidationContinuationData?.continuation ??
+      continuationData.timedContinuationData?.continuation ??
+      "";
+
+    return { continuation };
   }
 }
