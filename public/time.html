@@ -14,11 +14,14 @@
         height: 100vh;
         margin: 0;
         font-size: 4em;
-        color: white;
         font-weight: 800;
         font-family: "Roboto", sans-serif;
-
-        background-color: rgba(0, 255, 0);
+        color: var(--font-color, black);
+        background-color: var(--background-color);
+      }
+      body.green {
+        --background-color: limegreen;
+        --font-color: white;
       }
     </style>
   </head>
@@ -50,6 +53,10 @@
             .join(":");
         };
         setInterval(callback, 5e2);
+
+        if (new URLSearchParams(document.location.search).has("green")) {
+          document.body.classList.add("green");
+        }
       })();
     </script>
   </body>
