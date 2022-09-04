@@ -2,13 +2,15 @@ import fs from "fs";
 
 import axios from "axios";
 import EventEmitter from "events";
+import { parseChatData } from "youtube-chat/dist/parser";
 import { fetchLivePage } from "youtube-chat/dist/requests";
 import type {
   FetchOptions,
   GetLiveChatResponse,
 } from "youtube-chat/dist/types/yt-response";
+import type { ChatItem } from "youtube-chat/dist/types/data";
 
-import { AREA, day, MembershipLevel, MembershipLevelRegex } from "./config";
+import { AREA, day, MembershipLevelRegex } from "./config";
 import { AreaToCurrency } from "./utils/data";
 
 export const getChat = async (options: FetchOptions) => {
@@ -92,16 +94,21 @@ export class LiveChat extends EventEmitter {
     const data = await this.getChat(this.options);
     this.oneData ||= true;
     this.options.continuation = data.continuation;
-    //   chatItems.forEach((chatItem) => this.emit("chat", chatItem));
 
-    // try {
-    //   const [chatItems, continuation] = await fetchChat(this.#options);
-    //   chatItems.forEach((chatItem) => this.emit("chat", chatItem));
+    try {
+      const data = await this.getChat(this.options);
+      const {
+        chat: [chatItems, continuation],
+      } = data;
 
-    //   this.#options.continuation = continuation;
-    // } catch (err) {
-    //   this.emit("error", err);
-    // }
+      chatItems.forEach((chatItem) => this.emit("chat", chatItem));
+      this.emit("newMembership", data);
+      this.emit("newPaidMessage", data);
+
+      this.options.continuation = continuation;
+    } catch (err) {
+      this.emit("error", err);
+    }
   }
 
   protected async getChat(options: FetchOptions) {
@@ -121,6 +128,33 @@ export class LiveChat extends EventEmitter {
   }
 }
 
+export interface LiveChatEvents {
+  start: [liveId: string | undefined];
+  error: [err: unknown];
+  end: [reason: string | undefined];
+
+  chat: [chat: ChatItem];
+  newMembership: [chat: parseChatType];
+  newPaidMessage: [chat: parseChatType];
+}
+
+export interface LiveChat {
+  on<T extends keyof LiveChatEvents>(
+    event: T,
+    listener: (...args: LiveChatEvents[T]) => void
+  ): this;
+
+  once<T extends keyof LiveChatEvents>(
+    event: T,
+    listener: (...args: LiveChatEvents[T]) => void
+  ): this;
+
+  emit<T extends keyof LiveChatEvents>(
+    event: T,
+    ...args: LiveChatEvents[T]
+  ): boolean;
+}
+
 export const parseChat = async (
   data: GetLiveChatResponse,
   exchange: Record<string, number>
@@ -131,18 +165,15 @@ export const parseChat = async (
     data: { rates },
   } = await axios.get(`https://api.exchangerate.host/latest?base=${AREA}`);
   exchange = <typeof exchange>rates;
-  /* continuation */
-  // const [continuationData] =
-  //   data.continuationContents.liveChatContinuation.continuations;
 
-  // const continuation =
-  //   continuationData.invalidationContinuationData?.continuation ??
-  //   continuationData.timedContinuationData?.continuation ??
-  //   "";
-  const continuation = "";
-  // console.log(
-  //   JSON.stringify(data.continuationContents.liveChatContinuation.actions)
-  // );
+  /* continuation */
+  const [continuationData] =
+    data.continuationContents.liveChatContinuation.continuations;
+
+  const continuation =
+    continuationData.invalidationContinuationData?.continuation ??
+    continuationData.timedContinuationData?.continuation ??
+    "";
 
   /* MembershipMessage */
   const MembershipMessage =
@@ -153,24 +184,24 @@ export const parseChat = async (
   const [, MembershipType] =
     MembershipMessage?.match(MembershipLevelRegex) || [];
 
-  console.log(MembershipType, MembershipLevel?.[MembershipType]);
-
   /* ChatPaidMessage */
   const ChatPaidMessage =
     data.continuationContents.liveChatContinuation.actions?.[0]
       .addChatItemAction?.item.liveChatPaidMessageRenderer?.purchaseAmountText
       .simpleText;
-  const [, area, count] =
+  const [, currency, amountValue] =
     ChatPaidMessage?.replace("$", "").match(/([a-zA-Z-_]+?) *([0-9.]+)/) || [];
-  console.log(
-    ChatPaidMessage?.replace("$", "").match(/([a-zA-Z-_]+?) *([0-9.]+)/),
-    JSON.stringify(
-      data.continuationContents.liveChatContinuation.actions?.[0]
-        .addChatItemAction?.item
-    )
-  );
 
-  console.log(+count / (exchange?.[AreaToCurrency?.[area] || area] || 1));
-
-  return { continuation };
+  return {
+    continuation,
+    currency,
+    amountValue,
+    baseAmountValue:
+      +amountValue /
+        (exchange?.[AreaToCurrency?.[currency] || currency] || 1) || void 0,
+    MembershipType,
+    chat: parseChatData(data),
+  };
 };
+
+export type parseChatType = Awaited<ReturnType<typeof parseChat>>;

@@ -59,29 +59,7 @@ server
     res.sendFile(path.join(publicDir, "config.html"));
   })
   .post("/", (req, res) => {
-    const data: string = req.body;
-
-    const [mark, time] = data.split(":");
-
-    console.log(mark, time || "");
-
-    if (mark === "+") lave.setTime(lave.getTime() + +time);
-    else if (mark === "-") lave.setTime(lave.getTime() - +time);
-    else if (mark === "stop" && !stopTime) {
-      stopTime = new Date();
-      event.emit("stop", stopTime);
-    } else if (mark === "continue" && stopTime) event.emit("continue");
-
-    event.emit(
-      "update",
-      stopTime
-        ? new Date(
-            lave.getTime() +
-              (new Date().getTime() - new Date(stopTime).getTime())
-          )
-        : lave
-    );
-
+    addTime(req.body);
     res.sendStatus(200);
   })
   .get(
@@ -126,3 +104,25 @@ server
 server.listen(process.env.PORT || 5090, () => {
   console.log("Server is running");
 });
+
+export const addTime = (data: string) => {
+  const [mark, time] = data.split(":");
+
+  console.log(mark, time || "");
+
+  if (mark === "+") lave.setTime(lave.getTime() + +time);
+  else if (mark === "-") lave.setTime(lave.getTime() - +time);
+  else if (mark === "stop" && !stopTime) {
+    stopTime = new Date();
+    event.emit("stop", stopTime);
+  } else if (mark === "continue" && stopTime) event.emit("continue");
+
+  event.emit(
+    "update",
+    stopTime
+      ? new Date(
+          lave.getTime() + (new Date().getTime() - new Date(stopTime).getTime())
+        )
+      : lave
+  );
+};
