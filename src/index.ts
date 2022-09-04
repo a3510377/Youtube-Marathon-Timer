@@ -20,6 +20,7 @@ chat
     );
   })
   .on("newMembership", (data) => {
+    // 我懶所以多寫 if 一次不過沒差
     if (!data.baseAmountValue) return;
 
     addTime(`+:${data.baseAmountValue * Proportion}`);
