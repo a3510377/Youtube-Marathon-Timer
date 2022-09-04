@@ -16,11 +16,11 @@ const event = new EventEmitter();
 let lave = new Date();
 
 try {
-  lave = new Date(fs.readFileSync("tmp", "utf8"));
+  lave = new Date(+fs.readFileSync("tmp", "utf8"));
 } catch {
   fs.writeFileSync("tmp", lave.toString());
 }
-event.on("update", () => fs.writeFileSync("tmp", lave.toString()));
+event.on("update", () => fs.writeFileSync("tmp", lave.getTime().toString()));
 
 server
   .use(bodyParse.urlencoded({ extended: true }))
@@ -56,7 +56,7 @@ server
       const keepAlive = new KeepAlive(() => res.json({}, "ping"));
 
       const sendNewTime = (time?: Date) => {
-        res.send((time || lave).toString(), "update");
+        res.send((time || lave).getTime().toString(), "update");
       };
 
       res.setHeader("Access-Control-Allow-Origin", "*");

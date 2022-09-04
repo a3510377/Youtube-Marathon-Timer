@@ -12,15 +12,19 @@
     <script>
       (() => {
         const time = document.getElementById("time");
+        if (!time) throw new Error("time element not found");
+
         let lave = new Date();
 
         const sse = new EventSource("/time");
 
-        sse.addEventListener("update", ({ data }) => (lave = new Date(data)));
+        sse.addEventListener("update", ({ data }) => {
+          lave = new Date(+data.replaceAll(/["']/g, ""));
+        });
 
         const callback = () => {
           let distance = (lave.getTime() - new Date().getTime()) / 1e3;
-
+          console.log(distance);
           time.innerText = [
             distance / 60 / 60,
             (distance / 60) % 60,
