@@ -23,12 +23,10 @@ chat
   .on("newMembership", (data) => {
     // 我懶所以多寫 if 一次不過沒差
     console.log(data);
-
-    if (!data.baseAmountValue) return;
-
-    addTime(`+:${data.baseAmountValue * Proportion}`);
+    addTime(`+:${MembershipLevel?.[data.MembershipType] || 0}`);
   })
   .on("newPaidMessage", (data) => {
     console.log(data);
-    addTime(`+:${MembershipLevel?.[data.MembershipType] || 0}`);
+
+    data.baseAmountValue && addTime(`+:${data.baseAmountValue * Proportion}`);
   });
