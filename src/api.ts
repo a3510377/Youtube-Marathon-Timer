@@ -58,20 +58,15 @@ export class LiveChat extends EventEmitter {
   ): Promise<boolean> {
     if (this.observer) return false;
 
-    try {
-      // TODO
-      const options = await fetchLivePage(id);
-      this.liveId = options.liveId;
-      this.options = options;
+    // TODO
+    const options = await fetchLivePage(id);
+    this.liveId = options.liveId;
+    this.options = options;
 
-      this.observer = setInterval(this.execute.bind(this), this.interval);
+    this.observer = setInterval(this.execute.bind(this), this.interval);
 
-      this.emit("start", this.liveId);
-      return true;
-    } catch (err) {
-      this.emit("error", err);
-      return false;
-    }
+    this.emit("start", this.liveId);
+    return true;
   }
 
   public stop(reason?: string) {
@@ -85,31 +80,29 @@ export class LiveChat extends EventEmitter {
   public async execute() {
     if (!this.options) {
       const message = "Not found options";
-      this.emit("error", new Error(message));
       this.stop(message);
-
-      return;
+      throw new Error(message);
     }
 
     const data = await this.getChat(this.options);
-    this.oneData ||= true;
+
     this.options.continuation = data.continuation;
 
-    try {
-      const data = await this.getChat(this.options);
-      const {
-        chat: [chatItems, continuation],
-      } = data;
+    const {
+      chat: [chatItems, continuation],
+    } = data;
 
-      chatItems.forEach((chatItem) => this.emit("chat", chatItem));
-
-      data.MembershipType && this.emit("newMembership", data);
-      data.amountValue && this.emit("newPaidMessage", data);
-
-      this.options.continuation = continuation;
-    } catch (err) {
-      this.emit("error", err);
+    if (chatItems.length > 0 && !this.oneData) {
+      this.oneData = true;
+      return;
     }
+
+    chatItems.forEach((chatItem) => this.emit("chat", chatItem));
+
+    data.MembershipType && this.emit("newMembership", data);
+    data.amountValue && this.emit("newPaidMessage", data);
+
+    this.options.continuation = continuation;
   }
 
   protected async getChat(options: FetchOptions) {
@@ -131,7 +124,6 @@ export class LiveChat extends EventEmitter {
 
 export interface LiveChatEvents {
   start: [liveId: string | undefined];
-  error: [err: unknown];
   end: [reason: string | undefined];
 
   chat: [chat: ChatItem];
