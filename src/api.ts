@@ -152,8 +152,6 @@ export const parseChat = async (
   data: GetLiveChatResponse,
   exchange: Record<string, number>
 ) => {
-  fs.writeFileSync("data.json", JSON.stringify(data, null, 2));
-
   const {
     data: { rates },
   } = await axios.get(`https://api.exchangerate.host/latest?base=${AREA}`);

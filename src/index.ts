@@ -1,14 +1,15 @@
 import "./server";
 import { LiveChat } from "./api";
 import { addTime } from "./server";
-import { MembershipLevel, Proportion } from "./config";
+import { interval, MembershipLevel, Proportion } from "./config";
 
 process
   .on("uncaughtException", (er: Error) => console.error(er.toString()))
   .on("unhandledRejection", (er: Error) => console.error(er.toString()));
 
 const chat = new LiveChat(
-  "https://www.youtube.com/channel/UC9YOQFPfEUXbulKDtxeqqBA"
+  "https://www.youtube.com/channel/UC9YOQFPfEUXbulKDtxeqqBA",
+  interval
 );
 
 chat
@@ -21,10 +22,13 @@ chat
   })
   .on("newMembership", (data) => {
     // 我懶所以多寫 if 一次不過沒差
+    console.log(data);
+
     if (!data.baseAmountValue) return;
 
     addTime(`+:${data.baseAmountValue * Proportion}`);
   })
   .on("newPaidMessage", (data) => {
+    console.log(data);
     addTime(`+:${MembershipLevel?.[data.MembershipType] || 0}`);
   });

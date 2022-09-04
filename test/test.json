@@ -1,173 +1,145 @@
-[
-  {
-    "clickTrackingParams": "CAEQl98BIhMI5ZLx75n6-QIVAsZMAh252Qaa",
-    "addChatItemAction": {
-      "item": {
-        "liveChatMembershipItemRenderer": {
-          "id": "ChwKGkNPU3VfdTZaLXZrQ0Zmc2VyUVlkNEpVRFJR",
-          "timestampUsec": "1662262366412459",
-          "authorExternalChannelId": "UCAyDFOY6GkpF2sFpisOisCQ",
-          "headerSubtext": {
-            "runs": [
-              { "text": "Welcome to " },
-              { "text": "白銀臥胡" },
-              { "text": "!" }
-            ]
+{
+  "responseContext": {
+    "visitorData": "CgtHRDROTWNiMlBqRSjK2tGYBg%3D%3D",
+    "serviceTrackingParams": [
+      {
+        "service": "CSI",
+        "params": [
+          {
+            "key": "c",
+            "value": "WEB"
           },
-          "authorName": { "simpleText": "Hsuan Yu" },
-          "authorPhoto": {
-            "thumbnails": [
-              {
-                "url": "https://yt4.ggpht.com/dlRmMhqaf4lCqW7MeTf3aFFoaZFL8plnkVF0yimCFXuEzVwZThfWei21O4Bx6AzG8pn5pQfhFQ=s32-c-k-c0x00ffffff-no-rj",
-                "width": 32,
-                "height": 32
-              },
-              {
-                "url": "https://yt4.ggpht.com/dlRmMhqaf4lCqW7MeTf3aFFoaZFL8plnkVF0yimCFXuEzVwZThfWei21O4Bx6AzG8pn5pQfhFQ=s64-c-k-c0x00ffffff-no-rj",
-                "width": 64,
-                "height": 64
-              }
-            ]
+          {
+            "key": "cver",
+            "value": "2.20220902.01.00"
           },
-          "authorBadges": [
-            {
-              "liveChatAuthorBadgeRenderer": {
-                "customThumbnail": {
-                  "thumbnails": [
+          {
+            "key": "yt_li",
+            "value": "0"
+          },
+          {
+            "key": "GetLiveChat_rid",
+            "value": "0x6a7d69afbdeb2de6"
+          }
+        ]
+      },
+      {
+        "service": "GFEEDBACK",
+        "params": [
+          {
+            "key": "logged_in",
+            "value": "0"
+          },
+          {
+            "key": "e",
+            "value": "24247427,24268142,24185614,24255163,24036947,24260441,24134435,24273912,24248231,24164186,24187377,24246468,23946420,24001373,24226335,24254935,23966208,24277901,24263795,24199724,24281086,23804281,24246430,24248091,24255543,39322278,24239632,1714248,23998056,24225190,23882685,24004644,24257106,24161116,24007246,24229161,24218921,24191629,24135310,24211178,24227844,23934970,24260783,24269952,23983296,24187043,24140247,24267564,24264860,24262346,24255544,24276632,24002025,24169501,23940248,24166867,24241378,24275322,24256689,24181174,24216097,24034168,23986015,24260036,24262782,24225483,24120819,24269960,24278466,23974157,24260844,24152442,24243988,24254502,24077241,24241709,23858057,24199774,23918597,24080738,24219713,24269957,24002022,39322223,24275333,24248385,23744176"
+          }
+        ]
+      },
+      {
+        "service": "GUIDED_HELP",
+        "params": [
+          {
+            "key": "logged_in",
+            "value": "0"
+          }
+        ]
+      },
+      {
+        "service": "ECATCHER",
+        "params": [
+          {
+            "key": "client.version",
+            "value": "2.20220902"
+          },
+          {
+            "key": "client.name",
+            "value": "WEB"
+          },
+          {
+            "key": "client.fexp",
+            "value": "24247427,24268142,24185614,24255163,24036947,24260441,24134435,24273912,24248231,24164186,24187377,24246468,23946420,24001373,24226335,24254935,23966208,24277901,24263795,24199724,24281086,23804281,24246430,24248091,24255543,39322278,24239632,1714248,23998056,24225190,23882685,24004644,24257106,24161116,24007246,24229161,24218921,24191629,24135310,24211178,24227844,23934970,24260783,24269952,23983296,24187043,24140247,24267564,24264860,24262346,24255544,24276632,24002025,24169501,23940248,24166867,24241378,24275322,24256689,24181174,24216097,24034168,23986015,24260036,24262782,24225483,24120819,24269960,24278466,23974157,24260844,24152442,24243988,24254502,24077241,24241709,23858057,24199774,23918597,24080738,24219713,24269957,24002022,39322223,24275333,24248385,23744176"
+          }
+        ]
+      }
+    ],
+    "mainAppWebResponseContext": {
+      "loggedOut": true
+    },
+    "webResponseContextExtensionData": {
+      "hasDecorated": true
+    }
+  },
+  "continuationContents": {
+    "liveChatContinuation": {
+      "continuations": [
+        {
+          "invalidationContinuationData": {
+            "invalidationId": {
+              "objectSource": 1056,
+              "objectId": "Y2hhdH52R09pTGVyNWpDMH41NTQwOTQ0",
+              "topic": "chat~vGOiLer5jC0~5540944",
+              "subscribeToGcmTopics": true,
+              "protoCreationTimestampMs": "1662283082910"
+            },
+            "timeoutMs": 10000,
+            "continuation": "0ofMyAPlARpYQ2lrcUp3b1lWVU01V1U5UlJsQm1SVlZZWW5Wc1MwUjBlR1Z4Y1VKQkVndDJSMDlwVEdWeU5XcERNQm9UNnFqZHVRRU5DZ3QyUjA5cFRHVnlOV3BETUNBQijL0rCE5_r5AjAAQAJKUAgBGAAgAEoECAEQAFCU2t6g5Pr5AlgEeACiAQUaAwisAqoBBBAAGgCwAQDAAQDIAZTa3qDk-vkC4gEMCN7U0ZgGEI_Zh9AD6AEA8AEA-AEAUMzX34Tn-vkCWITpjs6F-vkCggECCASIAQCgAbOSsYXn-vkCsgEAugECCAo%3D"
+          }
+        }
+      ],
+      "actions": [
+        {
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
                     {
-                      "url": "https://yt3.ggpht.com/CqHEsWvBMXK3h0K5TP48HTfy44F-j8nBSAFIHHhxsq_tv2Fmwd16Q0ZzFLVGdFvIAwjYA4p2-Q=s16-c-k"
-                    },
-                    {
-                      "url": "https://yt3.ggpht.com/CqHEsWvBMXK3h0K5TP48HTfy44F-j8nBSAFIHHhxsq_tv2Fmwd16Q0ZzFLVGdFvIAwjYA4p2-Q=s32-c-k"
+                      "text": "加油"
                     }
                   ]
                 },
-                "tooltip": "New member",
-                "accessibility": {
-                  "accessibilityData": { "label": "New member" }
-                }
-              }
-            }
-          ],
-          "contextMenuEndpoint": {
-            "clickTrackingParams": "CAUQ4P0GIhMI5ZLx75n6-QIVAsZMAh252Qaa",
-            "commandMetadata": {
-              "webCommandMetadata": { "ignoreNavigation": true }
-            },
-            "liveChatItemContextMenuEndpoint": {
-              "params": "Q2g0S0hBb2FRMDlUZFY5MU5sb3RkbXREUm1aelpYSlJXV1EwU2xWRVVsRWFLU29uQ2hoVlF6bFpUMUZHVUdaRlZWaGlkV3hMUkhSNFpYRnhRa0VTQzNaSFQybE1aWEkxYWtNd0lBRW9CRElhQ2hoVlEwRjVSRVpQV1RaSGEzQkdNbk5HY0dselQybHpRMUU0QWtnQVVBUSUzRA=="
-            }
-          },
-          "contextMenuAccessibility": {
-            "accessibilityData": { "label": "Chat actions" }
-          },
-          "trackingParams": "CAUQ4P0GIhMI5ZLx75n6-QIVAsZMAh252Qaa"
-        }
-      }
-    }
-  },
-  {
-    "clickTrackingParams": "CAEQl98BIhMI5ZLx75n6-QIVAsZMAh252Qaa",
-    "addLiveChatTickerItemAction": {
-      "item": {
-        "liveChatTickerSponsorItemRenderer": {
-          "id": "ChwKGkNPU3VfdTZaLXZrQ0Zmc2VyUVlkNEpVRFJR",
-          "detailText": { "runs": [{ "text": "Member" }] },
-          "detailTextColor": 4294967295,
-          "startBackgroundColor": 4279213400,
-          "endBackgroundColor": 4278943811,
-          "sponsorPhoto": {
-            "thumbnails": [
-              {
-                "url": "https://yt4.ggpht.com/dlRmMhqaf4lCqW7MeTf3aFFoaZFL8plnkVF0yimCFXuEzVwZThfWei21O4Bx6AzG8pn5pQfhFQ=s32-c-k-c0x00ffffff-no-rj",
-                "width": 32,
-                "height": 32
-              },
-              {
-                "url": "https://yt4.ggpht.com/dlRmMhqaf4lCqW7MeTf3aFFoaZFL8plnkVF0yimCFXuEzVwZThfWei21O4Bx6AzG8pn5pQfhFQ=s64-c-k-c0x00ffffff-no-rj",
-                "width": 64,
-                "height": 64
-              }
-            ]
-          },
-          "durationSec": 300,
-          "showItemEndpoint": {
-            "clickTrackingParams": "CAIQ4v0GIhMI5ZLx75n6-QIVAsZMAh252Qaa",
-            "commandMetadata": {
-              "webCommandMetadata": { "ignoreNavigation": true }
-            },
-            "showLiveChatItemEndpoint": {
-              "renderer": {
-                "liveChatMembershipItemRenderer": {
-                  "id": "ChwKGkNPU3VfdTZaLXZrQ0Zmc2VyUVlkNEpVRFJR",
-                  "timestampUsec": "1662262366412459",
-                  "authorExternalChannelId": "UCAyDFOY6GkpF2sFpisOisCQ",
-                  "headerSubtext": {
-                    "runs": [
-                      { "text": "Welcome to " },
-                      { "text": "白銀臥胡" },
-                      { "text": "!" }
-                    ]
-                  },
-                  "authorName": { "simpleText": "Hsuan Yu" },
-                  "authorPhoto": {
-                    "thumbnails": [
-                      {
-                        "url": "https://yt4.ggpht.com/dlRmMhqaf4lCqW7MeTf3aFFoaZFL8plnkVF0yimCFXuEzVwZThfWei21O4Bx6AzG8pn5pQfhFQ=s32-c-k-c0x00ffffff-no-rj",
-                        "width": 32,
-                        "height": 32
-                      },
-                      {
-                        "url": "https://yt4.ggpht.com/dlRmMhqaf4lCqW7MeTf3aFFoaZFL8plnkVF0yimCFXuEzVwZThfWei21O4Bx6AzG8pn5pQfhFQ=s64-c-k-c0x00ffffff-no-rj",
-                        "width": 64,
-                        "height": 64
-                      }
-                    ]
-                  },
-                  "authorBadges": [
+                "authorName": {
+                  "simpleText": "bernie"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
                     {
-                      "liveChatAuthorBadgeRenderer": {
-                        "customThumbnail": {
-                          "thumbnails": [
-                            {
-                              "url": "https://yt3.ggpht.com/CqHEsWvBMXK3h0K5TP48HTfy44F-j8nBSAFIHHhxsq_tv2Fmwd16Q0ZzFLVGdFvIAwjYA4p2-Q=s16-c-k"
-                            },
-                            {
-                              "url": "https://yt3.ggpht.com/CqHEsWvBMXK3h0K5TP48HTfy44F-j8nBSAFIHHhxsq_tv2Fmwd16Q0ZzFLVGdFvIAwjYA4p2-Q=s32-c-k"
-                            }
-                          ]
-                        },
-                        "tooltip": "New member",
-                        "accessibility": {
-                          "accessibilityData": { "label": "New member" }
-                        }
-                      }
-                    }
-                  ],
-                  "contextMenuEndpoint": {
-                    "clickTrackingParams": "CAQQ4P0GIhMI5ZLx75n6-QIVAsZMAh252Qaa",
-                    "commandMetadata": {
-                      "webCommandMetadata": { "ignoreNavigation": true }
+                      "url": "https://yt4.ggpht.com/ytc/AMLnZu-yzzMa1BPVZ_Y1XOItSmpjxbV5x82_6WNteGlR1pZzX7rIk6N-7nNjLr1VZ30R=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
                     },
-                    "liveChatItemContextMenuEndpoint": {
-                      "params": "Q2g0S0hBb2FRMDlUZFY5MU5sb3RkbXREUm1aelpYSlJXV1EwU2xWRVVsRWFLU29uQ2hoVlF6bFpUMUZHVUdaRlZWaGlkV3hMUkhSNFpYRnhRa0VTQzNaSFQybE1aWEkxYWtNd0lBRW9CRElhQ2hoVlEwRjVSRVpQV1RaSGEzQkdNbk5HY0dselQybHpRMUU0QWtnQVVBUSUzRA=="
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AMLnZu-yzzMa1BPVZ_Y1XOItSmpjxbV5x82_6WNteGlR1pZzX7rIk6N-7nNjLr1VZ30R=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
                     }
                   },
-                  "contextMenuAccessibility": {
-                    "accessibilityData": { "label": "Chat actions" }
-                  },
-                  "trackingParams": "CAQQ4P0GIhMI5ZLx75n6-QIVAsZMAh252Qaa"
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2pzS09Rb2FRMGxVVTNOSlZHNHRkbXREUmxaclRuSlJXV1J3Y2tGRU5HY1NHME5RTTNselgxUnRMWFpyUTBaVFNrMUVkMGxrUlRWelNEZFJNQm9wS2ljS0dGVkRPVmxQVVVaUVprVlZXR0oxYkV0RWRIaGxjWEZDUVJJTGRrZFBhVXhsY2pWcVF6QWdBU2dFTWhvS0dGVkRVMXB6Vm5SeWMwOXlSRXB0V1UwMWNXSnRkaTFSVVRnQ1NBQlFBUSUzRCUzRA=="
+                  }
+                },
+                "id": "CjkKGkNJVFNzSVRuLXZrQ0ZWa05yUVlkcHJBRDRnEhtDUDN5c19UbS12a0NGU0pNRHdJZEU1c0g3UTA%3D",
+                "timestampUsec": "1662283080804683",
+                "authorExternalChannelId": "UCSZsVtrsOrDJmYM5qbmv-QQ",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Chat actions"
+                  }
                 }
-              },
-              "trackingParams": "CAMQjtEGIhMI5ZLx75n6-QIVAsZMAh252Qaa"
-            }
-          },
-          "authorExternalChannelId": "UCAyDFOY6GkpF2sFpisOisCQ",
-          "fullDurationSec": 300,
-          "trackingParams": "CAIQ4v0GIhMI5ZLx75n6-QIVAsZMAh252Qaa"
+              }
+            },
+            "clientId": "CP3ys_Tm-vkCFSJMDwIdE5sH7Q0"
+          }
         }
-      },
-      "durationSec": "300"
+      ]
     }
   }
-]
+}

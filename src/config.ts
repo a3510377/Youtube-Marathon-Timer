@@ -5,6 +5,9 @@ export const minute = second * 60;
 export const hour = minute * 60;
 export const day = hour * 24;
 
+/**間隔獲取最新訊息 (ms) */
+export const interval = 1000;
+
 /**匯率換算使用
  * @see https://api.exchangerate.host/latest
  */
