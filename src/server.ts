@@ -99,11 +99,13 @@ server
       const sendNewTime = (time?: Date) => {
         res.send((time || lave).getTime().toString(), "update");
       };
-      const sendStop = (time?: Date) => res.send(time, "stop");
+      const sendStop = () => res.send("", "stop");
       const sendContinue = () => res.send("", "continue");
 
       res.setHeader("Access-Control-Allow-Origin", "*");
       keepAlive.start();
+
+      stopTime && sendStop();
       sendNewTime();
 
       event
