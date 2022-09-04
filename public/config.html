@@ -9,6 +9,10 @@
 
   <body>
     <iframe src="/time"></iframe>
+    <div id="sysconfig">
+      <div data-operate="stop">暫停</div>
+      <div data-operate="continue">繼續</div>
+    </div>
     <div id="config">
       <div class="add">
         <div data-operate="+:5000">+5秒</div>
@@ -57,11 +61,18 @@
         min-width: 400px;
         max-width: 500px;
       }
-      #config {
+      #config,
+      #sysconfig {
         display: flex;
         justify-content: space-around;
         width: 100%;
         margin-top: 20px;
+      }
+      #sysconfig {
+        justify-content: center;
+      }
+      #sysconfig [data-operate] {
+        width: 25%;
       }
       [data-operate] {
         cursor: pointer;

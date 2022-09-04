@@ -79,7 +79,6 @@ export class LiveChat extends EventEmitter {
     this.oneData ||= true;
     this.options.continuation = data.continuation;
     //   chatItems.forEach((chatItem) => this.emit("chat", chatItem));
-    console.log(data);
 
     // try {
     //   const [chatItems, continuation] = await fetchChat(this.#options);
@@ -112,7 +111,9 @@ export class LiveChat extends EventEmitter {
       continuationData.invalidationContinuationData?.continuation ??
       continuationData.timedContinuationData?.continuation ??
       "";
-
+    console.log(
+      JSON.stringify(data.continuationContents.liveChatContinuation.actions)
+    );
     return { continuation };
   }
 }

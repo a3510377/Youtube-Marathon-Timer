@@ -14,13 +14,42 @@ const server = express();
 const event = new EventEmitter();
 
 let lave = new Date();
+let stopTime: Date | undefined = void 0;
 
 try {
-  lave = new Date(+fs.readFileSync("tmp", "utf8"));
+  const tmp = fs.readFileSync("tmp", "utf8");
+  let lave_;
+
+  [, lave_, stopTime] = (
+    tmp.match(/([0-9]+)(?:;stop=([0-9]+|undefined)?;?)/) || []
+  ).map((_) => (!Number.isNaN(+_) && new Date(+_)) || void 0);
+
+  lave = lave_ || lave;
+  console.log(lave_?.getTime(), lave.getTime(), stopTime);
 } catch {
-  fs.writeFileSync("tmp", lave.toString());
+  fs.writeFileSync("tmp", lave.getTime().toString());
 }
-event.on("update", () => fs.writeFileSync("tmp", lave.getTime().toString()));
+const updateTmpFile = () => {
+  fs.writeFileSync(
+    "tmp",
+    lave.getTime().toString() + `;stop=${stopTime?.getTime()}`
+  );
+};
+
+event
+  .on("update", updateTmpFile)
+  .on("stop", updateTmpFile)
+  .on("continue", () => {
+    if (!stopTime) return;
+
+    lave.setTime(
+      lave.getTime() + (lave.getTime() - new Date(stopTime).getTime())
+    );
+    console.log(lave);
+
+    updateTmpFile();
+    stopTime = void 0;
+  });
 
 server
   .use(bodyParse.urlencoded({ extended: true }))
@@ -38,6 +67,10 @@ server
 
     if (mark === "+") lave.setTime(lave.getTime() + +time);
     else if (mark === "-") lave.setTime(lave.getTime() - +time);
+    else if (mark === "stop" && !stopTime) {
+      stopTime = new Date();
+      event.emit("stop", stopTime);
+    } else if (mark === "continue") event.emit("continue");
 
     event.emit("update", lave);
     res.sendStatus(200);
@@ -57,15 +90,24 @@ server
       const sendNewTime = (time?: Date) => {
         res.send((time || lave).getTime().toString(), "update");
       };
+      const sendStop = (time?: Date) => res.send(time, "stop");
+      const sendContinue = () => res.send("", "continue");
 
       res.setHeader("Access-Control-Allow-Origin", "*");
       keepAlive.start();
       sendNewTime();
-      event.on("update", sendNewTime);
+
+      event
+        .on("update", sendNewTime)
+        .on("stop", sendStop)
+        .on("continue", sendContinue);
 
       res.on("close", () => {
         keepAlive.stop();
-        event.removeListener("update", sendNewTime);
+        event
+          .removeListener("update", sendNewTime)
+          .removeListener("stop", sendStop)
+          .removeListener("continue", sendContinue);
       });
     }
   );

@@ -30,20 +30,16 @@
     <div id="time"></div>
     <script>
       (() => {
+        console.log("test");
         const time = document.getElementById("time");
         if (!time) throw new Error("time element not found");
 
         let lave = new Date();
 
         const sse = new EventSource("/time");
-
-        sse.addEventListener("update", ({ data }) => {
-          lave = new Date(+data.replaceAll(/["']/g, ""));
-        });
-
         const callback = () => {
           let distance = (lave.getTime() - new Date().getTime()) / 1e3;
-          console.log(distance);
+
           time.innerText = [
             distance / 60 / 60,
             (distance / 60) % 60,
@@ -52,7 +48,21 @@
             .map((d) => (~~d).toString().padStart(2, "0"))
             .join(":");
         };
-        setInterval(callback, 5e2);
+        let loop = setInterval(callback, 5e2);
+
+        sse.addEventListener("update", ({ data }) => {
+          lave = new Date(+data.replaceAll(/["']/g, ""));
+        });
+        sse.addEventListener("stop", () => {
+          console.log("stop");
+          clearInterval(loop);
+          console.log(loop);
+        });
+        sse.addEventListener("continue", () => {
+          console.log("continue");
+          clearInterval(loop);
+          loop = setInterval(callback, 5e2);
+        });
 
         if (new URLSearchParams(document.location.search).has("green")) {
           document.body.classList.add("green");
