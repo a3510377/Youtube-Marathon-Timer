@@ -51,11 +51,11 @@
 
         sse.addEventListener("update", ({ data }) => {
           lave = new Date(+data.replaceAll(/["']/g, ""));
+          callback();
         });
         sse.addEventListener("stop", () => {
           console.log("stop");
           clearInterval(loop);
-          console.log(loop);
         });
         sse.addEventListener("continue", () => {
           console.log("continue");

@@ -62,16 +62,26 @@ server
     const data: string = req.body;
 
     const [mark, time] = data.split(":");
-    console.log(mark, time);
+
+    console.log(mark, time || "");
 
     if (mark === "+") lave.setTime(lave.getTime() + +time);
     else if (mark === "-") lave.setTime(lave.getTime() - +time);
     else if (mark === "stop" && !stopTime) {
       stopTime = new Date();
       event.emit("stop", stopTime);
-    } else if (mark === "continue") stopTime && event.emit("continue");
+    } else if (mark === "continue" && stopTime) event.emit("continue");
 
-    event.emit("update", lave);
+    event.emit(
+      "update",
+      stopTime
+        ? new Date(
+            lave.getTime() +
+              (new Date().getTime() - new Date(stopTime).getTime())
+          )
+        : lave
+    );
+
     res.sendStatus(200);
   })
   .get(
