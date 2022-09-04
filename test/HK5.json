@@ -1,0 +1,70 @@
+[
+  {
+    "clickTrackingParams": "CAEQl98BIhMI7avJ7KX6-QIVj0QPAh29JgS3",
+    "addChatItemAction": {
+      "item": {
+        "liveChatPaidMessageRenderer": {
+          "id": "ChwKGkNKdmluT1dsLXZrQ0ZjUUlmUW9kby13TThn",
+          "timestampUsec": "1662265581433946",
+          "authorName": { "simpleText": "夜芷冰" },
+          "authorPhoto": {
+            "thumbnails": [
+              {
+                "url": "https://yt4.ggpht.com/2tw1-K2F0aYauDBki1O4mP-gH6qnzzncVix8Lf5DRKoU06n5M9Kl-AiTkCkyRrrqvacoUctu=s32-c-k-c0x00ffffff-no-rj",
+                "width": 32,
+                "height": 32
+              },
+              {
+                "url": "https://yt4.ggpht.com/2tw1-K2F0aYauDBki1O4mP-gH6qnzzncVix8Lf5DRKoU06n5M9Kl-AiTkCkyRrrqvacoUctu=s64-c-k-c0x00ffffff-no-rj",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          "purchaseAmountText": { "simpleText": "HK$5.00" },
+          "headerBackgroundColor": 4279592384,
+          "headerTextColor": 4294967295,
+          "bodyBackgroundColor": 4280191205,
+          "bodyTextColor": 4294967295,
+          "authorExternalChannelId": "UCuzwRFAifUQvqJrV1-CXH8g",
+          "authorNameTextColor": 3019898879,
+          "contextMenuEndpoint": {
+            "clickTrackingParams": "CAIQ7rsEIhMI7avJ7KX6-QIVj0QPAh29JgS3",
+            "commandMetadata": {
+              "webCommandMetadata": { "ignoreNavigation": true }
+            },
+            "liveChatItemContextMenuEndpoint": {
+              "params": "Q2g0S0hBb2FRMHAyYVc1UFYyd3RkbXREUm1OUlNXWlJiMlJ2TFhkTk9HY2FLU29uQ2hoVlF6bFpUMUZHVUdaRlZWaGlkV3hMUkhSNFpYRnhRa0VTQzNaSFQybE1aWEkxYWtNd0lBRW9CRElhQ2hoVlEzVjZkMUpHUVdsbVZWRjJjVXB5VmpFdFExaElPR2M0QWtnQVVBOCUzRA=="
+            }
+          },
+          "timestampColor": 2164260863,
+          "contextMenuAccessibility": {
+            "accessibilityData": { "label": "Chat actions" }
+          },
+          "trackingParams": "CAIQ7rsEIhMI7avJ7KX6-QIVj0QPAh29JgS3",
+          "authorBadges": [
+            {
+              "liveChatAuthorBadgeRenderer": {
+                "customThumbnail": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt3.ggpht.com/CqHEsWvBMXK3h0K5TP48HTfy44F-j8nBSAFIHHhxsq_tv2Fmwd16Q0ZzFLVGdFvIAwjYA4p2-Q=s16-c-k"
+                    },
+                    {
+                      "url": "https://yt3.ggpht.com/CqHEsWvBMXK3h0K5TP48HTfy44F-j8nBSAFIHHhxsq_tv2Fmwd16Q0ZzFLVGdFvIAwjYA4p2-Q=s32-c-k"
+                    }
+                  ]
+                },
+                "tooltip": "New member",
+                "accessibility": {
+                  "accessibilityData": { "label": "New member" }
+                }
+              }
+            }
+          ],
+          "textInputBackgroundColor": 805306368
+        }
+      }
+    }
+  }
+]

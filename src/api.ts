@@ -1,4 +1,5 @@
 import fs from "fs";
+
 import axios from "axios";
 import EventEmitter from "events";
 import { fetchLivePage } from "youtube-chat/dist/requests";
@@ -6,7 +7,9 @@ import type {
   FetchOptions,
   GetLiveChatResponse,
 } from "youtube-chat/dist/types/yt-response";
-import { regexEscape } from "./utils";
+
+import { AREA, day, MembershipLevel, MembershipLevelRegex } from "./config";
+import { AreaToCurrency } from "./utils/data";
 
 export const getChat = async (options: FetchOptions) => {
   const url = `https://www.youtube.com/youtubei/v1/live_chat/get_live_chat?key=${options.apiKey}`;
@@ -26,6 +29,7 @@ export class LiveChat extends EventEmitter {
   protected observer?: NodeJS.Timer;
   protected options?: FetchOptions;
   protected oneData?: boolean;
+  protected exchange?: Record<string, number>;
 
   public constructor(url: string, protected readonly interval = 1000) {
     super();
@@ -36,6 +40,15 @@ export class LiveChat extends EventEmitter {
       ) || [];
 
     this.start(channelId ? { channelId } : { liveId });
+
+    const updateExchangeRates = async () => {
+      const {
+        data: { rates },
+      } = await axios.get(`https://api.exchangerate.host/latest?base=${AREA}`);
+      this.exchange = <typeof this.exchange>rates;
+    };
+    setInterval(updateExchangeRates.bind(this), day);
+    updateExchangeRates();
   }
 
   public async start(
@@ -94,40 +107,70 @@ export class LiveChat extends EventEmitter {
   protected async getChat(options: FetchOptions) {
     const url = `https://www.youtube.com/youtubei/v1/live_chat/get_live_chat?key=${options.apiKey}`;
 
-    const data = await axios
-      .post(url, {
-        context: {
-          client: { clientVersion: options.clientVersion, clientName: "WEB" },
-        },
-        continuation: options.continuation,
-      })
-      .then(({ data }): GetLiveChatResponse => data);
-
-    fs.writeFileSync("data.json", JSON.stringify(data, null, 2));
-
-    const [continuationData] =
-      data.continuationContents.liveChatContinuation.continuations;
-
-    const continuation =
-      continuationData.invalidationContinuationData?.continuation ??
-      continuationData.timedContinuationData?.continuation ??
-      "";
-    console.log(
-      JSON.stringify(data.continuationContents.liveChatContinuation.actions)
+    return parseChat(
+      await axios
+        .post(url, {
+          context: {
+            client: { clientVersion: options.clientVersion, clientName: "WEB" },
+          },
+          continuation: options.continuation,
+        })
+        .then(({ data }): GetLiveChatResponse => data),
+      this.exchange || {}
     );
-
-    data.continuationContents.liveChatContinuation.actions[0].addChatItemAction?.item.liveChatMembershipItemRenderer?.headerSubtext.runs
-      .map((_) => "text" in _ && _.text)
-      .join(" ");
-    new RegExp("");
-
-    ("白銀臥胡");
-    ("黃金臥胡");
-    ("鉑金臥胡");
-    ("鑽石臥胡");
-    ("傳說臥胡");
-    regexEscape();
-
-    return { continuation };
   }
 }
+
+export const parseChat = async (
+  data: GetLiveChatResponse,
+  exchange: Record<string, number>
+) => {
+  fs.writeFileSync("data.json", JSON.stringify(data, null, 2));
+
+  const {
+    data: { rates },
+  } = await axios.get(`https://api.exchangerate.host/latest?base=${AREA}`);
+  exchange = <typeof exchange>rates;
+  /* continuation */
+  // const [continuationData] =
+  //   data.continuationContents.liveChatContinuation.continuations;
+
+  // const continuation =
+  //   continuationData.invalidationContinuationData?.continuation ??
+  //   continuationData.timedContinuationData?.continuation ??
+  //   "";
+  const continuation = "";
+  // console.log(
+  //   JSON.stringify(data.continuationContents.liveChatContinuation.actions)
+  // );
+
+  /* MembershipMessage */
+  const MembershipMessage =
+    data.continuationContents.liveChatContinuation.actions?.[0].addChatItemAction?.item.liveChatMembershipItemRenderer?.headerSubtext.runs
+      .map((_) => "text" in _ && _.text)
+      .join("");
+
+  const [, MembershipType] =
+    MembershipMessage?.match(MembershipLevelRegex) || [];
+
+  console.log(MembershipType, MembershipLevel?.[MembershipType]);
+
+  /* ChatPaidMessage */
+  const ChatPaidMessage =
+    data.continuationContents.liveChatContinuation.actions?.[0]
+      .addChatItemAction?.item.liveChatPaidMessageRenderer?.purchaseAmountText
+      .simpleText;
+  const [, area, count] =
+    ChatPaidMessage?.replace("$", "").match(/([a-zA-Z-_]+?) *([0-9.]+)/) || [];
+  console.log(
+    ChatPaidMessage?.replace("$", "").match(/([a-zA-Z-_]+?) *([0-9.]+)/),
+    JSON.stringify(
+      data.continuationContents.liveChatContinuation.actions?.[0]
+        .addChatItemAction?.item
+    )
+  );
+
+  console.log(+count / (exchange?.[AreaToCurrency?.[area] || area] || 1));
+
+  return { continuation };
+};
