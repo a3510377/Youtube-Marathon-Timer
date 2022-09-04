@@ -102,8 +102,9 @@ export class LiveChat extends EventEmitter {
       } = data;
 
       chatItems.forEach((chatItem) => this.emit("chat", chatItem));
-      this.emit("newMembership", data);
-      this.emit("newPaidMessage", data);
+
+      data.MembershipType && this.emit("newMembership", data);
+      data.amountValue && this.emit("newPaidMessage", data);
 
       this.options.continuation = continuation;
     } catch (err) {
