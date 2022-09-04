@@ -7,5 +7,32 @@
     <title>設定</title>
   </head>
 
-  <body></body>
+  <body>
+    <div id="config">
+      <div data-operate="+:5000">+5秒</div>
+      <div data-operate="+:10000">+10秒</div>
+      <div data-operate="+:30000">+30秒</div>
+      <div data-operate="+:60000">+1分鐘</div>
+      <div data-operate="+:300000">+5分鐘</div>
+      <div data-operate="+:600000">+10分鐘</div>
+      <div data-operate="+:1800000">+30分鐘</div>
+      <div data-operate="+:3600000">+1小時</div>
+
+      <div data-operate="-:5000">-5秒</div>
+      <div data-operate="-:10000">-10秒</div>
+      <div data-operate="-:30000">-30秒</div>
+      <div data-operate="-:60000">-1分鐘</div>
+      <div data-operate="-:300000">-5分鐘</div>
+      <div data-operate="-:600000">-10分鐘</div>
+      <div data-operate="-:1800000">-30分鐘</div>
+      <div data-operate="-:3600000">-1小時</div>
+    </div>
+    <script>
+      document.querySelectorAll("div[data-operate]").forEach((el) => {
+        el.addEventListener("click", () => {
+          fetch("/", { method: "POST", body: el.dataset.operate });
+        });
+      });
+    </script>
+  </body>
 </html>

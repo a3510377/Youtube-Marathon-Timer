@@ -34,14 +34,13 @@ server
     const data: string = req.body;
 
     const [mark, time] = data.split(":");
-    console.log(lave.getTime() + +time);
     console.log(mark, time);
 
     if (mark === "+") lave.setTime(lave.getTime() + +time);
     else if (mark === "-") lave.setTime(lave.getTime() - +time);
 
     event.emit("update", lave);
-    res.send();
+    res.sendStatus(200);
   })
   .get(
     "/time",
