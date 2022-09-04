@@ -43,9 +43,8 @@ event
     if (!stopTime) return;
 
     lave.setTime(
-      lave.getTime() + (lave.getTime() - new Date(stopTime).getTime())
+      lave.getTime() + (new Date().getTime() - new Date(stopTime).getTime())
     );
-    console.log(lave);
 
     updateTmpFile();
     stopTime = void 0;
@@ -70,7 +69,7 @@ server
     else if (mark === "stop" && !stopTime) {
       stopTime = new Date();
       event.emit("stop", stopTime);
-    } else if (mark === "continue") event.emit("continue");
+    } else if (mark === "continue") stopTime && event.emit("continue");
 
     event.emit("update", lave);
     res.sendStatus(200);
@@ -85,7 +84,7 @@ server
     sse,
     (_req, res_) => {
       const res = <typeof res_ & { json: sendSeeType; send: sendSeeType }>res_;
-      const keepAlive = new KeepAlive(() => res.json({}, "ping"));
+      const keepAlive = new KeepAlive(() => res.json("", "ping"));
 
       const sendNewTime = (time?: Date) => {
         res.send((time || lave).getTime().toString(), "update");
