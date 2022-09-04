@@ -25,5 +25,5 @@ COPY --from=node_modules /node_modules/ ./node_modules/
 COPY --from=node_modules /package.json ./package.json
 COPY --from=builder /build/dist/ ./dist/
 
-CMD node dist
-EXPOSE 5000
+CMD yarn start
+EXPOSE 5090

@@ -1,5 +1,3 @@
-import fs from "fs";
-
 import axios from "axios";
 import EventEmitter from "events";
 import { parseChatData } from "youtube-chat/dist/parser";
@@ -10,8 +8,9 @@ import type {
 } from "youtube-chat/dist/types/yt-response";
 import type { ChatItem } from "youtube-chat/dist/types/data";
 
-import { AREA, day, MembershipLevelRegex } from "./config";
+import { AREA, MembershipLevelRegex } from "./config";
 import { AreaToCurrency } from "./utils/data";
+import { day } from "./utils";
 
 export const getChat = async (options: FetchOptions) => {
   const url = `https://www.youtube.com/youtubei/v1/live_chat/get_live_chat?key=${options.apiKey}`;
@@ -185,7 +184,7 @@ export const parseChat = async (
 
   return {
     continuation,
-    currency,
+    currency: currency || void 0,
     amountValue,
     baseAmountValue:
       +amountValue /

@@ -1,5 +1,10 @@
 import { NextFunction, Request, Response } from "express";
 
+export const second = 1e3;
+export const minute = second * 60;
+export const hour = minute * 60;
+export const day = hour * 24;
+
 export class KeepAlive {
   protected loop?: NodeJS.Timeout;
 
@@ -47,6 +52,16 @@ export const sse = (_req: Request, res: Response, next: NextFunction) => {
 
 export const regexEscape = (...args: string[]): string[] => {
   return args.map((_) => _.replace(/[-/\\^$*+?.()|[\]{}]/g, "\\$&"));
+};
+
+export const timeCalc = (text: string) => {
+  const timeWord = { s: second, m: minute, h: hour, d: day };
+
+  Object.entries(timeWord).forEach(([key, value]) => {
+    text = text.replace(key, `*${value}`);
+  });
+
+  return 0;
 };
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any

@@ -1,12 +1,14 @@
-import { regexEscape } from "./utils";
+import jsYml from "js-yaml";
 
-export const second = 1e3;
-export const minute = second * 60;
-export const hour = minute * 60;
-export const day = hour * 24;
+import { minute, regexEscape, timeCalc } from "./utils";
 
+const config = jsYml.load("config.yml");
+console.log(timeCalc("1m"));
 /**間隔獲取最新訊息 (ms) */
 export const interval = 1000;
+
+/**頻道或直播網址 */
+export const IDUrl = "https://www.youtube.com/channel/UC9YOQFPfEUXbulKDtxeqqBA";
 
 /**匯率換算使用
  * @see https://api.exchangerate.host/latest
