@@ -1,0 +1,173 @@
+[
+  {
+    "clickTrackingParams": "CAEQl98BIhMI6sL8h5r6-QIVj2aLCh0x9wb0",
+    "addChatItemAction": {
+      "item": {
+        "liveChatMembershipItemRenderer": {
+          "id": "ChwKGkNLakp1NGVhLXZrQ0ZWczByUVlkVjFzS1JB",
+          "timestampUsec": "1662262417846562",
+          "authorExternalChannelId": "UCudEqHinQAw5zL-e73Vaf1g",
+          "headerSubtext": {
+            "runs": [
+              { "text": "Welcome to " },
+              { "text": "白銀臥胡" },
+              { "text": "!" }
+            ]
+          },
+          "authorName": { "simpleText": "不會游泳的魚" },
+          "authorPhoto": {
+            "thumbnails": [
+              {
+                "url": "https://yt4.ggpht.com/ytc/AMLnZu8I6K3nWr-Cw6-6J3JUDOKpVYxy1djvA8_SoiEN=s32-c-k-c0x00ffffff-no-rj",
+                "width": 32,
+                "height": 32
+              },
+              {
+                "url": "https://yt4.ggpht.com/ytc/AMLnZu8I6K3nWr-Cw6-6J3JUDOKpVYxy1djvA8_SoiEN=s64-c-k-c0x00ffffff-no-rj",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          "authorBadges": [
+            {
+              "liveChatAuthorBadgeRenderer": {
+                "customThumbnail": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt3.ggpht.com/CqHEsWvBMXK3h0K5TP48HTfy44F-j8nBSAFIHHhxsq_tv2Fmwd16Q0ZzFLVGdFvIAwjYA4p2-Q=s16-c-k"
+                    },
+                    {
+                      "url": "https://yt3.ggpht.com/CqHEsWvBMXK3h0K5TP48HTfy44F-j8nBSAFIHHhxsq_tv2Fmwd16Q0ZzFLVGdFvIAwjYA4p2-Q=s32-c-k"
+                    }
+                  ]
+                },
+                "tooltip": "New member",
+                "accessibility": {
+                  "accessibilityData": { "label": "New member" }
+                }
+              }
+            }
+          ],
+          "contextMenuEndpoint": {
+            "clickTrackingParams": "CAUQ4P0GIhMI6sL8h5r6-QIVj2aLCh0x9wb0",
+            "commandMetadata": {
+              "webCommandMetadata": { "ignoreNavigation": true }
+            },
+            "liveChatItemContextMenuEndpoint": {
+              "params": "Q2g0S0hBb2FRMHRxU25VMFpXRXRkbXREUmxaek1ISlJXV1JXTVhOTFVrRWFLU29uQ2hoVlF6bFpUMUZHVUdaRlZWaGlkV3hMUkhSNFpYRnhRa0VTQzNaSFQybE1aWEkxYWtNd0lBRW9CRElhQ2hoVlEzVmtSWEZJYVc1UlFYYzFla3d0WlRjelZtRm1NV2M0QWtnQVVBUSUzRA=="
+            }
+          },
+          "contextMenuAccessibility": {
+            "accessibilityData": { "label": "Chat actions" }
+          },
+          "trackingParams": "CAUQ4P0GIhMI6sL8h5r6-QIVj2aLCh0x9wb0"
+        }
+      }
+    }
+  },
+  {
+    "clickTrackingParams": "CAEQl98BIhMI6sL8h5r6-QIVj2aLCh0x9wb0",
+    "addLiveChatTickerItemAction": {
+      "item": {
+        "liveChatTickerSponsorItemRenderer": {
+          "id": "ChwKGkNLakp1NGVhLXZrQ0ZWczByUVlkVjFzS1JB",
+          "detailText": { "runs": [{ "text": "Member" }] },
+          "detailTextColor": 4294967295,
+          "startBackgroundColor": 4279213400,
+          "endBackgroundColor": 4278943811,
+          "sponsorPhoto": {
+            "thumbnails": [
+              {
+                "url": "https://yt4.ggpht.com/ytc/AMLnZu8I6K3nWr-Cw6-6J3JUDOKpVYxy1djvA8_SoiEN=s32-c-k-c0x00ffffff-no-rj",
+                "width": 32,
+                "height": 32
+              },
+              {
+                "url": "https://yt4.ggpht.com/ytc/AMLnZu8I6K3nWr-Cw6-6J3JUDOKpVYxy1djvA8_SoiEN=s64-c-k-c0x00ffffff-no-rj",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          "durationSec": 300,
+          "showItemEndpoint": {
+            "clickTrackingParams": "CAIQ4v0GIhMI6sL8h5r6-QIVj2aLCh0x9wb0",
+            "commandMetadata": {
+              "webCommandMetadata": { "ignoreNavigation": true }
+            },
+            "showLiveChatItemEndpoint": {
+              "renderer": {
+                "liveChatMembershipItemRenderer": {
+                  "id": "ChwKGkNLakp1NGVhLXZrQ0ZWczByUVlkVjFzS1JB",
+                  "timestampUsec": "1662262417846562",
+                  "authorExternalChannelId": "UCudEqHinQAw5zL-e73Vaf1g",
+                  "headerSubtext": {
+                    "runs": [
+                      { "text": "Welcome to " },
+                      { "text": "白銀臥胡" },
+                      { "text": "!" }
+                    ]
+                  },
+                  "authorName": { "simpleText": "不會游泳的魚" },
+                  "authorPhoto": {
+                    "thumbnails": [
+                      {
+                        "url": "https://yt4.ggpht.com/ytc/AMLnZu8I6K3nWr-Cw6-6J3JUDOKpVYxy1djvA8_SoiEN=s32-c-k-c0x00ffffff-no-rj",
+                        "width": 32,
+                        "height": 32
+                      },
+                      {
+                        "url": "https://yt4.ggpht.com/ytc/AMLnZu8I6K3nWr-Cw6-6J3JUDOKpVYxy1djvA8_SoiEN=s64-c-k-c0x00ffffff-no-rj",
+                        "width": 64,
+                        "height": 64
+                      }
+                    ]
+                  },
+                  "authorBadges": [
+                    {
+                      "liveChatAuthorBadgeRenderer": {
+                        "customThumbnail": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/CqHEsWvBMXK3h0K5TP48HTfy44F-j8nBSAFIHHhxsq_tv2Fmwd16Q0ZzFLVGdFvIAwjYA4p2-Q=s16-c-k"
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/CqHEsWvBMXK3h0K5TP48HTfy44F-j8nBSAFIHHhxsq_tv2Fmwd16Q0ZzFLVGdFvIAwjYA4p2-Q=s32-c-k"
+                            }
+                          ]
+                        },
+                        "tooltip": "New member",
+                        "accessibility": {
+                          "accessibilityData": { "label": "New member" }
+                        }
+                      }
+                    }
+                  ],
+                  "contextMenuEndpoint": {
+                    "clickTrackingParams": "CAQQ4P0GIhMI6sL8h5r6-QIVj2aLCh0x9wb0",
+                    "commandMetadata": {
+                      "webCommandMetadata": { "ignoreNavigation": true }
+                    },
+                    "liveChatItemContextMenuEndpoint": {
+                      "params": "Q2g0S0hBb2FRMHRxU25VMFpXRXRkbXREUmxaek1ISlJXV1JXTVhOTFVrRWFLU29uQ2hoVlF6bFpUMUZHVUdaRlZWaGlkV3hMUkhSNFpYRnhRa0VTQzNaSFQybE1aWEkxYWtNd0lBRW9CRElhQ2hoVlEzVmtSWEZJYVc1UlFYYzFla3d0WlRjelZtRm1NV2M0QWtnQVVBUSUzRA=="
+                    }
+                  },
+                  "contextMenuAccessibility": {
+                    "accessibilityData": { "label": "Chat actions" }
+                  },
+                  "trackingParams": "CAQQ4P0GIhMI6sL8h5r6-QIVj2aLCh0x9wb0"
+                }
+              },
+              "trackingParams": "CAMQjtEGIhMI6sL8h5r6-QIVj2aLCh0x9wb0"
+            }
+          },
+          "authorExternalChannelId": "UCudEqHinQAw5zL-e73Vaf1g",
+          "fullDurationSec": 300,
+          "trackingParams": "CAIQ4v0GIhMI6sL8h5r6-QIVj2aLCh0x9wb0"
+        }
+      },
+      "durationSec": "300"
+    }
+  }
+]

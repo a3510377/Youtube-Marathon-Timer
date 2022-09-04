@@ -1,0 +1,101 @@
+[
+  {
+    "clickTrackingParams": "CAEQl98BIhMI34DCiaL6-QIVAFIPAh32-g9D",
+    "addChatItemAction": {
+      "item": {
+        "liveChatPaidMessageRenderer": {
+          "id": "ChwKGkNMZVB0SUNpLXZrQ0ZlRURyUVlkcWtnS1JB",
+          "timestampUsec": "1662264568711779",
+          "authorName": { "simpleText": "Eddie Lin" },
+          "authorPhoto": {
+            "thumbnails": [
+              {
+                "url": "https://yt4.ggpht.com/ytc/AMLnZu8zqUYCUu9lXYS-IJFbwr5nh4CaJbzn8_8A2M5STA=s32-c-k-c0x00ffffff-no-rj",
+                "width": 32,
+                "height": 32
+              },
+              {
+                "url": "https://yt4.ggpht.com/ytc/AMLnZu8zqUYCUu9lXYS-IJFbwr5nh4CaJbzn8_8A2M5STA=s64-c-k-c0x00ffffff-no-rj",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          "purchaseAmountText": { "simpleText": "NT$30.00" },
+          "message": {
+            "runs": [
+              { "text": "喔我可以超級留言了" },
+              {
+                "emoji": {
+                  "emojiId": "UC9YOQFPfEUXbulKDtxeqqBA/CuihXK3WNNDJgwPEjr_oBg",
+                  "shortcuts": [":_Huzi666:", ":Huzi666:", ":_666:", ":666:"],
+                  "searchTerms": ["_Huzi666", "Huzi666", "_666", "666"],
+                  "image": {
+                    "thumbnails": [
+                      {
+                        "url": "https://yt3.ggpht.com/yGQ3OAHiYwSY4_x11N9OtYcLwNA4dhF5MrGmo9j8mFcaDqQj9DcmfN2KGqlscWpBN45phFR6=w24-h24-c-k-nd",
+                        "width": 24,
+                        "height": 24
+                      },
+                      {
+                        "url": "https://yt3.ggpht.com/yGQ3OAHiYwSY4_x11N9OtYcLwNA4dhF5MrGmo9j8mFcaDqQj9DcmfN2KGqlscWpBN45phFR6=w48-h48-c-k-nd",
+                        "width": 48,
+                        "height": 48
+                      }
+                    ],
+                    "accessibility": {
+                      "accessibilityData": { "label": "Huzi666" }
+                    }
+                  },
+                  "isCustomEmoji": true
+                }
+              },
+              { "text": " 胡仔這個畫面的倒數計時器會壓到畫面" }
+            ]
+          },
+          "headerBackgroundColor": 4278237396,
+          "headerTextColor": 4278190080,
+          "bodyBackgroundColor": 4278248959,
+          "bodyTextColor": 4278190080,
+          "authorExternalChannelId": "UCREReBdyU7oiC_vria5uytA",
+          "authorNameTextColor": 3003121664,
+          "contextMenuEndpoint": {
+            "clickTrackingParams": "CAIQ7rsEIhMI34DCiaL6-QIVAFIPAh32-g9D",
+            "commandMetadata": {
+              "webCommandMetadata": { "ignoreNavigation": true }
+            },
+            "liveChatItemContextMenuEndpoint": {
+              "params": "Q2g0S0hBb2FRMHhsVUhSSlEya3RkbXREUm1WRlJISlJXV1J4YTJkTFVrRWFLU29uQ2hoVlF6bFpUMUZHVUdaRlZWaGlkV3hMUkhSNFpYRnhRa0VTQzNaSFQybE1aWEkxYWtNd0lBRW9CRElhQ2hoVlExSkZVbVZDWkhsVk4yOXBRMTkyY21saE5YVjVkRUU0QWtnQVVBOCUzRA=="
+            }
+          },
+          "timestampColor": 2147483648,
+          "contextMenuAccessibility": {
+            "accessibilityData": { "label": "Chat actions" }
+          },
+          "trackingParams": "CAIQ7rsEIhMI34DCiaL6-QIVAFIPAh32-g9D",
+          "authorBadges": [
+            {
+              "liveChatAuthorBadgeRenderer": {
+                "customThumbnail": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt3.ggpht.com/pIzzey-a4IMvZ0HCOMPaGTwvt4ReOgsEIKGarJb1nokBPoxChTtJNWxDEbbxAsh3e_hw4ZzL0A=s16-c-k"
+                    },
+                    {
+                      "url": "https://yt3.ggpht.com/pIzzey-a4IMvZ0HCOMPaGTwvt4ReOgsEIKGarJb1nokBPoxChTtJNWxDEbbxAsh3e_hw4ZzL0A=s32-c-k"
+                    }
+                  ]
+                },
+                "tooltip": "Member (1 month)",
+                "accessibility": {
+                  "accessibilityData": { "label": "Member (1 month)" }
+                }
+              }
+            }
+          ],
+          "textInputBackgroundColor": 822083583
+        }
+      }
+    }
+  }
+]

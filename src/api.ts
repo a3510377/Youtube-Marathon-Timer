@@ -6,6 +6,7 @@ import type {
   FetchOptions,
   GetLiveChatResponse,
 } from "youtube-chat/dist/types/yt-response";
+import { regexEscape } from "./utils";
 
 export const getChat = async (options: FetchOptions) => {
   const url = `https://www.youtube.com/youtubei/v1/live_chat/get_live_chat?key=${options.apiKey}`;
@@ -114,6 +115,19 @@ export class LiveChat extends EventEmitter {
     console.log(
       JSON.stringify(data.continuationContents.liveChatContinuation.actions)
     );
+
+    data.continuationContents.liveChatContinuation.actions[0].addChatItemAction?.item.liveChatMembershipItemRenderer?.headerSubtext.runs
+      .map((_) => "text" in _ && _.text)
+      .join(" ");
+    new RegExp("");
+
+    ("白銀臥胡");
+    ("黃金臥胡");
+    ("鉑金臥胡");
+    ("鑽石臥胡");
+    ("傳說臥胡");
+    regexEscape();
+
     return { continuation };
   }
 }

@@ -1,0 +1,178 @@
+[
+  {
+    "clickTrackingParams": "CAEQl98BIhMI2oT3qKD6-QIVMYNWAR3tcQHL",
+    "addChatItemAction": {
+      "item": {
+        "liveChatPaidMessageRenderer": {
+          "id": "ChwKGkNNNnVoS09nLXZrQ0Zad0tyUVlkbmg0TTVR",
+          "timestampUsec": "1662264096993869",
+          "authorName": { "simpleText": "胡子Huzi" },
+          "authorPhoto": {
+            "thumbnails": [
+              {
+                "url": "https://yt4.ggpht.com/ytc/AMLnZu9c-6IY6ZG6hKizyBnd4ueOCDKou3N7tAd_AfFI=s32-c-k-c0x00ffffff-no-rj",
+                "width": 32,
+                "height": 32
+              },
+              {
+                "url": "https://yt4.ggpht.com/ytc/AMLnZu9c-6IY6ZG6hKizyBnd4ueOCDKou3N7tAd_AfFI=s64-c-k-c0x00ffffff-no-rj",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          "purchaseAmountText": { "simpleText": "NT$150.00" },
+          "message": { "runs": [{ "text": "再度測試，這筆應該要加到38分" }] },
+          "headerBackgroundColor": 4294947584,
+          "headerTextColor": 3741319168,
+          "bodyBackgroundColor": 4294953512,
+          "bodyTextColor": 3741319168,
+          "authorExternalChannelId": "UC9YOQFPfEUXbulKDtxeqqBA",
+          "authorNameTextColor": 2315255808,
+          "contextMenuEndpoint": {
+            "clickTrackingParams": "CAUQ7rsEIhMI2oT3qKD6-QIVMYNWAR3tcQHL",
+            "commandMetadata": {
+              "webCommandMetadata": { "ignoreNavigation": true }
+            },
+            "liveChatItemContextMenuEndpoint": {
+              "params": "Q2g0S0hBb2FRMDAyZFdoTFQyY3RkbXREUmxwM1MzSlJXV1J1YURSTk5WRWFLU29uQ2hoVlF6bFpUMUZHVUdaRlZWaGlkV3hMUkhSNFpYRnhRa0VTQzNaSFQybE1aWEkxYWtNd0lBRW9CRElhQ2hoVlF6bFpUMUZHVUdaRlZWaGlkV3hMUkhSNFpYRnhRa0U0QWtnQVVBOCUzRA=="
+            }
+          },
+          "timestampColor": 2147483648,
+          "contextMenuAccessibility": {
+            "accessibilityData": { "label": "Chat actions" }
+          },
+          "trackingParams": "CAUQ7rsEIhMI2oT3qKD6-QIVMYNWAR3tcQHL",
+          "authorBadges": [
+            {
+              "liveChatAuthorBadgeRenderer": {
+                "icon": { "iconType": "VERIFIED" },
+                "tooltip": "Verified",
+                "accessibility": {
+                  "accessibilityData": { "label": "Verified" }
+                }
+              }
+            },
+            {
+              "liveChatAuthorBadgeRenderer": {
+                "icon": { "iconType": "OWNER" },
+                "tooltip": "Owner",
+                "accessibility": { "accessibilityData": { "label": "Owner" } }
+              }
+            }
+          ],
+          "textInputBackgroundColor": 822083583
+        }
+      }
+    }
+  },
+  {
+    "clickTrackingParams": "CAEQl98BIhMI2oT3qKD6-QIVMYNWAR3tcQHL",
+    "addLiveChatTickerItemAction": {
+      "item": {
+        "liveChatTickerPaidMessageItemRenderer": {
+          "id": "ChwKGkNNNnVoS09nLXZrQ0Zad0tyUVlkbmg0TTVR",
+          "amount": { "simpleText": "NT$150.00" },
+          "amountTextColor": 3741319168,
+          "startBackgroundColor": 4294953512,
+          "endBackgroundColor": 4294947584,
+          "authorPhoto": {
+            "thumbnails": [
+              {
+                "url": "https://yt4.ggpht.com/ytc/AMLnZu9c-6IY6ZG6hKizyBnd4ueOCDKou3N7tAd_AfFI=s32-c-k-c0x00ffffff-no-rj",
+                "width": 32,
+                "height": 32
+              },
+              {
+                "url": "https://yt4.ggpht.com/ytc/AMLnZu9c-6IY6ZG6hKizyBnd4ueOCDKou3N7tAd_AfFI=s64-c-k-c0x00ffffff-no-rj",
+                "width": 64,
+                "height": 64
+              }
+            ],
+            "accessibility": { "accessibilityData": { "label": "胡子Huzi" } }
+          },
+          "durationSec": 300,
+          "showItemEndpoint": {
+            "clickTrackingParams": "CAIQsMgEIhMI2oT3qKD6-QIVMYNWAR3tcQHL",
+            "commandMetadata": {
+              "webCommandMetadata": { "ignoreNavigation": true }
+            },
+            "showLiveChatItemEndpoint": {
+              "renderer": {
+                "liveChatPaidMessageRenderer": {
+                  "id": "ChwKGkNNNnVoS09nLXZrQ0Zad0tyUVlkbmg0TTVR",
+                  "timestampUsec": "1662264096993869",
+                  "authorName": { "simpleText": "胡子Huzi" },
+                  "authorPhoto": {
+                    "thumbnails": [
+                      {
+                        "url": "https://yt4.ggpht.com/ytc/AMLnZu9c-6IY6ZG6hKizyBnd4ueOCDKou3N7tAd_AfFI=s32-c-k-c0x00ffffff-no-rj",
+                        "width": 32,
+                        "height": 32
+                      },
+                      {
+                        "url": "https://yt4.ggpht.com/ytc/AMLnZu9c-6IY6ZG6hKizyBnd4ueOCDKou3N7tAd_AfFI=s64-c-k-c0x00ffffff-no-rj",
+                        "width": 64,
+                        "height": 64
+                      }
+                    ]
+                  },
+                  "purchaseAmountText": { "simpleText": "NT$150.00" },
+                  "message": {
+                    "runs": [{ "text": "再度測試，這筆應該要加到38分" }]
+                  },
+                  "headerBackgroundColor": 4294947584,
+                  "headerTextColor": 3741319168,
+                  "bodyBackgroundColor": 4294953512,
+                  "bodyTextColor": 3741319168,
+                  "authorExternalChannelId": "UC9YOQFPfEUXbulKDtxeqqBA",
+                  "authorNameTextColor": 2315255808,
+                  "contextMenuEndpoint": {
+                    "clickTrackingParams": "CAQQ7rsEIhMI2oT3qKD6-QIVMYNWAR3tcQHL",
+                    "commandMetadata": {
+                      "webCommandMetadata": { "ignoreNavigation": true }
+                    },
+                    "liveChatItemContextMenuEndpoint": {
+                      "params": "Q2g0S0hBb2FRMDAyZFdoTFQyY3RkbXREUmxwM1MzSlJXV1J1YURSTk5WRWFLU29uQ2hoVlF6bFpUMUZHVUdaRlZWaGlkV3hMUkhSNFpYRnhRa0VTQzNaSFQybE1aWEkxYWtNd0lBRW9CRElhQ2hoVlF6bFpUMUZHVUdaRlZWaGlkV3hMUkhSNFpYRnhRa0U0QWtnQVVBOCUzRA=="
+                    }
+                  },
+                  "timestampColor": 2147483648,
+                  "contextMenuAccessibility": {
+                    "accessibilityData": { "label": "Chat actions" }
+                  },
+                  "trackingParams": "CAQQ7rsEIhMI2oT3qKD6-QIVMYNWAR3tcQHL",
+                  "authorBadges": [
+                    {
+                      "liveChatAuthorBadgeRenderer": {
+                        "icon": { "iconType": "VERIFIED" },
+                        "tooltip": "Verified",
+                        "accessibility": {
+                          "accessibilityData": { "label": "Verified" }
+                        }
+                      }
+                    },
+                    {
+                      "liveChatAuthorBadgeRenderer": {
+                        "icon": { "iconType": "OWNER" },
+                        "tooltip": "Owner",
+                        "accessibility": {
+                          "accessibilityData": { "label": "Owner" }
+                        }
+                      }
+                    }
+                  ],
+                  "textInputBackgroundColor": 822083583
+                }
+              },
+              "trackingParams": "CAMQjtEGIhMI2oT3qKD6-QIVMYNWAR3tcQHL"
+            }
+          },
+          "authorExternalChannelId": "UC9YOQFPfEUXbulKDtxeqqBA",
+          "fullDurationSec": 300,
+          "trackingParams": "CAIQsMgEIhMI2oT3qKD6-QIVMYNWAR3tcQHL"
+        }
+      },
+      "durationSec": "300"
+    }
+  }
+]

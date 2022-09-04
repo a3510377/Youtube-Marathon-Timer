@@ -8,4 +8,4 @@ process
   .on("unhandledRejection", (er: Error) => console.error(er.toString()));
 
 fetchLivePage;
-// new LiveChat("https://www.youtube.com/channel/UC9YOQFPfEUXbulKDtxeqqBA");
+new LiveChat("https://www.youtube.com/channel/UC9YOQFPfEUXbulKDtxeqqBA");

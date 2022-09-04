@@ -1,0 +1,173 @@
+[
+  {
+    "clickTrackingParams": "CAEQl98BIhMI5ZLx75n6-QIVAsZMAh252Qaa",
+    "addChatItemAction": {
+      "item": {
+        "liveChatMembershipItemRenderer": {
+          "id": "ChwKGkNPU3VfdTZaLXZrQ0Zmc2VyUVlkNEpVRFJR",
+          "timestampUsec": "1662262366412459",
+          "authorExternalChannelId": "UCAyDFOY6GkpF2sFpisOisCQ",
+          "headerSubtext": {
+            "runs": [
+              { "text": "Welcome to " },
+              { "text": "白銀臥胡" },
+              { "text": "!" }
+            ]
+          },
+          "authorName": { "simpleText": "Hsuan Yu" },
+          "authorPhoto": {
+            "thumbnails": [
+              {
+                "url": "https://yt4.ggpht.com/dlRmMhqaf4lCqW7MeTf3aFFoaZFL8plnkVF0yimCFXuEzVwZThfWei21O4Bx6AzG8pn5pQfhFQ=s32-c-k-c0x00ffffff-no-rj",
+                "width": 32,
+                "height": 32
+              },
+              {
+                "url": "https://yt4.ggpht.com/dlRmMhqaf4lCqW7MeTf3aFFoaZFL8plnkVF0yimCFXuEzVwZThfWei21O4Bx6AzG8pn5pQfhFQ=s64-c-k-c0x00ffffff-no-rj",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          "authorBadges": [
+            {
+              "liveChatAuthorBadgeRenderer": {
+                "customThumbnail": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt3.ggpht.com/CqHEsWvBMXK3h0K5TP48HTfy44F-j8nBSAFIHHhxsq_tv2Fmwd16Q0ZzFLVGdFvIAwjYA4p2-Q=s16-c-k"
+                    },
+                    {
+                      "url": "https://yt3.ggpht.com/CqHEsWvBMXK3h0K5TP48HTfy44F-j8nBSAFIHHhxsq_tv2Fmwd16Q0ZzFLVGdFvIAwjYA4p2-Q=s32-c-k"
+                    }
+                  ]
+                },
+                "tooltip": "New member",
+                "accessibility": {
+                  "accessibilityData": { "label": "New member" }
+                }
+              }
+            }
+          ],
+          "contextMenuEndpoint": {
+            "clickTrackingParams": "CAUQ4P0GIhMI5ZLx75n6-QIVAsZMAh252Qaa",
+            "commandMetadata": {
+              "webCommandMetadata": { "ignoreNavigation": true }
+            },
+            "liveChatItemContextMenuEndpoint": {
+              "params": "Q2g0S0hBb2FRMDlUZFY5MU5sb3RkbXREUm1aelpYSlJXV1EwU2xWRVVsRWFLU29uQ2hoVlF6bFpUMUZHVUdaRlZWaGlkV3hMUkhSNFpYRnhRa0VTQzNaSFQybE1aWEkxYWtNd0lBRW9CRElhQ2hoVlEwRjVSRVpQV1RaSGEzQkdNbk5HY0dselQybHpRMUU0QWtnQVVBUSUzRA=="
+            }
+          },
+          "contextMenuAccessibility": {
+            "accessibilityData": { "label": "Chat actions" }
+          },
+          "trackingParams": "CAUQ4P0GIhMI5ZLx75n6-QIVAsZMAh252Qaa"
+        }
+      }
+    }
+  },
+  {
+    "clickTrackingParams": "CAEQl98BIhMI5ZLx75n6-QIVAsZMAh252Qaa",
+    "addLiveChatTickerItemAction": {
+      "item": {
+        "liveChatTickerSponsorItemRenderer": {
+          "id": "ChwKGkNPU3VfdTZaLXZrQ0Zmc2VyUVlkNEpVRFJR",
+          "detailText": { "runs": [{ "text": "Member" }] },
+          "detailTextColor": 4294967295,
+          "startBackgroundColor": 4279213400,
+          "endBackgroundColor": 4278943811,
+          "sponsorPhoto": {
+            "thumbnails": [
+              {
+                "url": "https://yt4.ggpht.com/dlRmMhqaf4lCqW7MeTf3aFFoaZFL8plnkVF0yimCFXuEzVwZThfWei21O4Bx6AzG8pn5pQfhFQ=s32-c-k-c0x00ffffff-no-rj",
+                "width": 32,
+                "height": 32
+              },
+              {
+                "url": "https://yt4.ggpht.com/dlRmMhqaf4lCqW7MeTf3aFFoaZFL8plnkVF0yimCFXuEzVwZThfWei21O4Bx6AzG8pn5pQfhFQ=s64-c-k-c0x00ffffff-no-rj",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          "durationSec": 300,
+          "showItemEndpoint": {
+            "clickTrackingParams": "CAIQ4v0GIhMI5ZLx75n6-QIVAsZMAh252Qaa",
+            "commandMetadata": {
+              "webCommandMetadata": { "ignoreNavigation": true }
+            },
+            "showLiveChatItemEndpoint": {
+              "renderer": {
+                "liveChatMembershipItemRenderer": {
+                  "id": "ChwKGkNPU3VfdTZaLXZrQ0Zmc2VyUVlkNEpVRFJR",
+                  "timestampUsec": "1662262366412459",
+                  "authorExternalChannelId": "UCAyDFOY6GkpF2sFpisOisCQ",
+                  "headerSubtext": {
+                    "runs": [
+                      { "text": "Welcome to " },
+                      { "text": "白銀臥胡" },
+                      { "text": "!" }
+                    ]
+                  },
+                  "authorName": { "simpleText": "Hsuan Yu" },
+                  "authorPhoto": {
+                    "thumbnails": [
+                      {
+                        "url": "https://yt4.ggpht.com/dlRmMhqaf4lCqW7MeTf3aFFoaZFL8plnkVF0yimCFXuEzVwZThfWei21O4Bx6AzG8pn5pQfhFQ=s32-c-k-c0x00ffffff-no-rj",
+                        "width": 32,
+                        "height": 32
+                      },
+                      {
+                        "url": "https://yt4.ggpht.com/dlRmMhqaf4lCqW7MeTf3aFFoaZFL8plnkVF0yimCFXuEzVwZThfWei21O4Bx6AzG8pn5pQfhFQ=s64-c-k-c0x00ffffff-no-rj",
+                        "width": 64,
+                        "height": 64
+                      }
+                    ]
+                  },
+                  "authorBadges": [
+                    {
+                      "liveChatAuthorBadgeRenderer": {
+                        "customThumbnail": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/CqHEsWvBMXK3h0K5TP48HTfy44F-j8nBSAFIHHhxsq_tv2Fmwd16Q0ZzFLVGdFvIAwjYA4p2-Q=s16-c-k"
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/CqHEsWvBMXK3h0K5TP48HTfy44F-j8nBSAFIHHhxsq_tv2Fmwd16Q0ZzFLVGdFvIAwjYA4p2-Q=s32-c-k"
+                            }
+                          ]
+                        },
+                        "tooltip": "New member",
+                        "accessibility": {
+                          "accessibilityData": { "label": "New member" }
+                        }
+                      }
+                    }
+                  ],
+                  "contextMenuEndpoint": {
+                    "clickTrackingParams": "CAQQ4P0GIhMI5ZLx75n6-QIVAsZMAh252Qaa",
+                    "commandMetadata": {
+                      "webCommandMetadata": { "ignoreNavigation": true }
+                    },
+                    "liveChatItemContextMenuEndpoint": {
+                      "params": "Q2g0S0hBb2FRMDlUZFY5MU5sb3RkbXREUm1aelpYSlJXV1EwU2xWRVVsRWFLU29uQ2hoVlF6bFpUMUZHVUdaRlZWaGlkV3hMUkhSNFpYRnhRa0VTQzNaSFQybE1aWEkxYWtNd0lBRW9CRElhQ2hoVlEwRjVSRVpQV1RaSGEzQkdNbk5HY0dselQybHpRMUU0QWtnQVVBUSUzRA=="
+                    }
+                  },
+                  "contextMenuAccessibility": {
+                    "accessibilityData": { "label": "Chat actions" }
+                  },
+                  "trackingParams": "CAQQ4P0GIhMI5ZLx75n6-QIVAsZMAh252Qaa"
+                }
+              },
+              "trackingParams": "CAMQjtEGIhMI5ZLx75n6-QIVAsZMAh252Qaa"
+            }
+          },
+          "authorExternalChannelId": "UCAyDFOY6GkpF2sFpisOisCQ",
+          "fullDurationSec": 300,
+          "trackingParams": "CAIQ4v0GIhMI5ZLx75n6-QIVAsZMAh252Qaa"
+        }
+      },
+      "durationSec": "300"
+    }
+  }
+]

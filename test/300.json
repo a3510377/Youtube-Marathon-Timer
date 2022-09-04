@@ -1,0 +1,152 @@
+[
+  {
+    "clickTrackingParams": "CAEQl98BIhMI35WQoKH6-QIVVJdWAR1KtAFI",
+    "addChatItemAction": {
+      "item": {
+        "liveChatPaidMessageRenderer": {
+          "id": "ChwKGkNMbWJrSnFoLXZrQ0ZiUUtmUW9kcTJNSzhn",
+          "timestampUsec": "1662264347187906",
+          "authorName": { "simpleText": "暗雨Anyu / Ðáren" },
+          "authorPhoto": {
+            "thumbnails": [
+              {
+                "url": "https://yt4.ggpht.com/IZCfrFchNp_hC4T0SKdJ1mWp5VrgvMwjam0R9dLxs_ak1fzaZwfGo9DlqvROChiUZreGdTyFtQ=s32-c-k-c0x00ffffff-no-rj",
+                "width": 32,
+                "height": 32
+              },
+              {
+                "url": "https://yt4.ggpht.com/IZCfrFchNp_hC4T0SKdJ1mWp5VrgvMwjam0R9dLxs_ak1fzaZwfGo9DlqvROChiUZreGdTyFtQ=s64-c-k-c0x00ffffff-no-rj",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          "purchaseAmountText": { "simpleText": "NT$300.00" },
+          "message": {
+            "runs": [
+              {
+                "text": "我自己看到的在YT的加班台大多是手動比較多@@畢竟沒有加時的插件"
+              }
+            ]
+          },
+          "headerBackgroundColor": 4293284096,
+          "headerTextColor": 3758096383,
+          "bodyBackgroundColor": 4294278144,
+          "bodyTextColor": 3758096383,
+          "authorExternalChannelId": "UCsAnEhTa9jHsihU-EL7zkWw",
+          "authorNameTextColor": 3019898879,
+          "contextMenuEndpoint": {
+            "clickTrackingParams": "CAUQ7rsEIhMI35WQoKH6-QIVVJdWAR1KtAFI",
+            "commandMetadata": {
+              "webCommandMetadata": { "ignoreNavigation": true }
+            },
+            "liveChatItemContextMenuEndpoint": {
+              "params": "Q2g0S0hBb2FRMHh0WW10S2NXZ3RkbXREUm1KUlMyWlJiMlJ4TWsxTE9HY2FLU29uQ2hoVlF6bFpUMUZHVUdaRlZWaGlkV3hMUkhSNFpYRnhRa0VTQzNaSFQybE1aWEkxYWtNd0lBRW9CRElhQ2hoVlEzTkJia1ZvVkdFNWFraHphV2hWTFVWTU4zcHJWM2M0QWtnQVVBOCUzRA=="
+            }
+          },
+          "timestampColor": 2164260863,
+          "contextMenuAccessibility": {
+            "accessibilityData": { "label": "Chat actions" }
+          },
+          "trackingParams": "CAUQ7rsEIhMI35WQoKH6-QIVVJdWAR1KtAFI",
+          "textInputBackgroundColor": 805306368
+        }
+      }
+    }
+  },
+  {
+    "clickTrackingParams": "CAEQl98BIhMI35WQoKH6-QIVVJdWAR1KtAFI",
+    "addLiveChatTickerItemAction": {
+      "item": {
+        "liveChatTickerPaidMessageItemRenderer": {
+          "id": "ChwKGkNMbWJrSnFoLXZrQ0ZiUUtmUW9kcTJNSzhn",
+          "amount": { "simpleText": "NT$300.00" },
+          "amountTextColor": 3758096383,
+          "startBackgroundColor": 4294278144,
+          "endBackgroundColor": 4293284096,
+          "authorPhoto": {
+            "thumbnails": [
+              {
+                "url": "https://yt4.ggpht.com/IZCfrFchNp_hC4T0SKdJ1mWp5VrgvMwjam0R9dLxs_ak1fzaZwfGo9DlqvROChiUZreGdTyFtQ=s32-c-k-c0x00ffffff-no-rj",
+                "width": 32,
+                "height": 32
+              },
+              {
+                "url": "https://yt4.ggpht.com/IZCfrFchNp_hC4T0SKdJ1mWp5VrgvMwjam0R9dLxs_ak1fzaZwfGo9DlqvROChiUZreGdTyFtQ=s64-c-k-c0x00ffffff-no-rj",
+                "width": 64,
+                "height": 64
+              }
+            ],
+            "accessibility": {
+              "accessibilityData": { "label": "暗雨Anyu / Ðáren" }
+            }
+          },
+          "durationSec": 600,
+          "showItemEndpoint": {
+            "clickTrackingParams": "CAIQsMgEIhMI35WQoKH6-QIVVJdWAR1KtAFI",
+            "commandMetadata": {
+              "webCommandMetadata": { "ignoreNavigation": true }
+            },
+            "showLiveChatItemEndpoint": {
+              "renderer": {
+                "liveChatPaidMessageRenderer": {
+                  "id": "ChwKGkNMbWJrSnFoLXZrQ0ZiUUtmUW9kcTJNSzhn",
+                  "timestampUsec": "1662264347187906",
+                  "authorName": { "simpleText": "暗雨Anyu / Ðáren" },
+                  "authorPhoto": {
+                    "thumbnails": [
+                      {
+                        "url": "https://yt4.ggpht.com/IZCfrFchNp_hC4T0SKdJ1mWp5VrgvMwjam0R9dLxs_ak1fzaZwfGo9DlqvROChiUZreGdTyFtQ=s32-c-k-c0x00ffffff-no-rj",
+                        "width": 32,
+                        "height": 32
+                      },
+                      {
+                        "url": "https://yt4.ggpht.com/IZCfrFchNp_hC4T0SKdJ1mWp5VrgvMwjam0R9dLxs_ak1fzaZwfGo9DlqvROChiUZreGdTyFtQ=s64-c-k-c0x00ffffff-no-rj",
+                        "width": 64,
+                        "height": 64
+                      }
+                    ]
+                  },
+                  "purchaseAmountText": { "simpleText": "NT$300.00" },
+                  "message": {
+                    "runs": [
+                      {
+                        "text": "我自己看到的在YT的加班台大多是手動比較多@@畢竟沒有加時的插件"
+                      }
+                    ]
+                  },
+                  "headerBackgroundColor": 4293284096,
+                  "headerTextColor": 3758096383,
+                  "bodyBackgroundColor": 4294278144,
+                  "bodyTextColor": 3758096383,
+                  "authorExternalChannelId": "UCsAnEhTa9jHsihU-EL7zkWw",
+                  "authorNameTextColor": 3019898879,
+                  "contextMenuEndpoint": {
+                    "clickTrackingParams": "CAQQ7rsEIhMI35WQoKH6-QIVVJdWAR1KtAFI",
+                    "commandMetadata": {
+                      "webCommandMetadata": { "ignoreNavigation": true }
+                    },
+                    "liveChatItemContextMenuEndpoint": {
+                      "params": "Q2g0S0hBb2FRMHh0WW10S2NXZ3RkbXREUm1KUlMyWlJiMlJ4TWsxTE9HY2FLU29uQ2hoVlF6bFpUMUZHVUdaRlZWaGlkV3hMUkhSNFpYRnhRa0VTQzNaSFQybE1aWEkxYWtNd0lBRW9CRElhQ2hoVlEzTkJia1ZvVkdFNWFraHphV2hWTFVWTU4zcHJWM2M0QWtnQVVBOCUzRA=="
+                    }
+                  },
+                  "timestampColor": 2164260863,
+                  "contextMenuAccessibility": {
+                    "accessibilityData": { "label": "Chat actions" }
+                  },
+                  "trackingParams": "CAQQ7rsEIhMI35WQoKH6-QIVVJdWAR1KtAFI",
+                  "textInputBackgroundColor": 805306368
+                }
+              },
+              "trackingParams": "CAMQjtEGIhMI35WQoKH6-QIVVJdWAR1KtAFI"
+            }
+          },
+          "authorExternalChannelId": "UCsAnEhTa9jHsihU-EL7zkWw",
+          "fullDurationSec": 600,
+          "trackingParams": "CAIQsMgEIhMI35WQoKH6-QIVVJdWAR1KtAFI"
+        }
+      },
+      "durationSec": "600"
+    }
+  }
+]

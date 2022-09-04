@@ -45,5 +45,9 @@ export const sse = (_req: Request, res: Response, next: NextFunction) => {
   next();
 };
 
+export const regexEscape = (...args: string[]): string[] => {
+  return args.map((_) => _.replace(/[-/\\^$*+?.()|[\]{}]/g, "\\$&"));
+};
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type sendSeeType<T = any> = (obj: T, type?: string) => T;
