@@ -48,7 +48,7 @@ export const MembershipLevelRegex = new RegExp(
 
 export interface ConfigType {
   /**獲取最新訊息間隔 (ms) */
-  interval: 1000;
+  interval: number;
 
   /**頻道或直播網址 */
   IDUrl: string;
