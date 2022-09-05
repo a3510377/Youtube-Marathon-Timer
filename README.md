@@ -13,8 +13,8 @@ yarn build
 yarn start
 ```
 
-1. 先行版: [點我下載](https://github.com/a3510377/youtube-work-overtime/releases/download/latest/youtube-work-overtime.zip)
-2. v1.0.0: [點我下載](https://github.com/a3510377/youtube-work-overtime/releases/download/v1.0.0/youtube-work-overtime.zip)
+1. 先行版: [點我下載](https://github.com/a3510377/youtube-work-overtime/releases/download/latest/Youtube-Work-Overtime.zip)
+2. v1.0.0: [點我下載](https://github.com/a3510377/youtube-work-overtime/releases/download/v1.0.0/Youtube-Work-Overtime.zip)
 
 [其它版本](https://github.com/a3510377/youtube-work-overtime/releases)
 
