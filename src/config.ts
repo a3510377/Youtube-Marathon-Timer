@@ -37,8 +37,8 @@ export const Proportion = config.Proportion;
  */
 export const MembershipLevel: ConfigType["MembershipLevel"] = Object.assign(
   {},
-  ...Object.entries(config.Proportion).map(([key, value]) => ({
-    [key]: timeCalc(value),
+  ...Object.entries(config.MembershipLevel).map(([key, value]) => ({
+    [key]: timeCalc(<string>(<unknown>value)),
   }))
 );
 
