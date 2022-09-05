@@ -10,7 +10,6 @@ on:
       tagName:
         description: "Release version tag name"
         required: false
-        default: "latest"
 
 jobs:
   deploy:
@@ -45,5 +44,5 @@ jobs:
         with:
           allowUpdates: true
           token: ${{ secrets.GITHUB_TOKEN }}
-          tag: ${{ github.event.inputs.tagName }}
+          tag: ${{ github.event.inputs.tagName || "latest" }}
           artifacts: "youtube-work-overtime.zip"
