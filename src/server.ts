@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import http from "http";
 
 import cors from "cors";
 import express from "express";
@@ -10,8 +11,10 @@ import { KeepAlive, sse, sendSeeType } from "./utils";
 
 const publicDir = path.join(__dirname, "..", "public");
 
-const server = express();
+const app = express();
+const server = http.createServer(app);
 const event = new EventEmitter();
+let port = +(process.env.PORT || 5090);
 
 let lave = new Date();
 let stopTime: Date | undefined = void 0;
@@ -50,7 +53,7 @@ event
     stopTime = void 0;
   });
 
-server
+app
   .use(bodyParse.urlencoded({ extended: true }))
   .use(bodyParse.text())
   .use(bodyParse.json())
@@ -101,9 +104,36 @@ server
     }
   );
 
-server.listen(process.env.PORT || 5090, () => {
-  console.log("Server is running");
-});
+server
+  .on("error", (error_) => {
+    const error = <Error & { code: string; syscall: string }>error_;
+
+    if (error.syscall !== "listen") throw error;
+
+    const bind = typeof port === "string" ? `Pipe ${port}` : `Port ${port}`;
+    console.log(error);
+
+    switch (error.code) {
+      case "EACCES":
+        console.error(`${bind} 需要更高全縣`);
+        process.exit(1);
+        break;
+      case "EADDRINUSE":
+        console.error(`${bind} 已使用`);
+        console.log("嘗試使用其他端口...");
+
+        server.listen(++port);
+        break;
+      default:
+        throw error;
+    }
+  })
+  .on("listening", () => {
+    console.log("Server is running");
+    console.log(`http://localhost:${port}`);
+  });
+
+server.listen(port);
 
 export const addTime = (data: string) => {
   const [mark, time] = data.split(":");
