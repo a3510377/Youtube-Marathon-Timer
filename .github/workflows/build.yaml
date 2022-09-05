@@ -39,3 +39,4 @@ jobs:
         with:
           artifacts: "youtube-work-overtime.zip"
           token: ${{ secrets.GITHUB_TOKEN }}
+          tag: "v1"
