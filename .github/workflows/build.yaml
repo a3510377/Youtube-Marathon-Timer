@@ -18,12 +18,14 @@ jobs:
         with:
           node-version: 16
 
-      - name: init dist
+      - name: init server
         run: |
           yarn --prod --silent
-          mkdir -p dist
-          cp -r node_modules dist
-          cp -r build/* dist
+          mkdir -p server
+          cp -r node_modules server
+          cp -r build/* server
+          cp -r public
+          echo "start server/start.bat" > start.bat
 
       - name: build
         run: |
@@ -32,7 +34,7 @@ jobs:
 
       - name: build to zip
         run: |
-          zip -r youtube-work-overtime dist/* || echo "build to zip error"
+          zip -r youtube-work-overtime server/* public/* start.bat || echo "build to zip error"
 
       - name: upload Release
         uses: ncipollo/release-action@v1
