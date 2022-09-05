@@ -1,0 +1,36 @@
+name: deploy
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Node.js v16.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: init dist
+        run: |
+          yarn --prod --silent
+          mkdir -p dist
+          cp -r node_modules dist
+          cp -r build dist
+
+      - name: build
+        run: |
+          yarn add typescript
+          yarn build
+
+      - name: Upload youtube work overtime
+        uses: ncipollo/release-action@v1
+        with:
+          directory: dist
+          artifacts: "youtube work overtime.zip"
+          token: ${{ secrets.GITHUB_TOKEN }}
