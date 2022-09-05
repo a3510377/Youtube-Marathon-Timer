@@ -14,6 +14,6 @@ yarn start start
 ```
 
 1. 先行版: [點我下載](https://github.com/a3510377/youtube-work-overtime/releases/download/latest/youtube-work-overtime.zip)
-2. v1: [v1](https://github.com/a3510377/youtube-work-overtime/releases/download/latest/youtube-work-overtime.zip)
+2. v1: [點我下載](https://github.com/a3510377/youtube-work-overtime/releases/download/latest/youtube-work-overtime.zip)
 
 [其它版本](https://github.com/a3510377/youtube-work-overtime/releases)

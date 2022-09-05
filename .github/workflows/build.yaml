@@ -6,6 +6,11 @@ on:
     tags:
       - "v*"
   workflow_dispatch:
+    inputs:
+      tagName:
+        description: "Release version tag name"
+        required: false
+        default: "latest"
 
 jobs:
   deploy:
@@ -40,5 +45,5 @@ jobs:
         with:
           allowUpdates: true
           token: ${{ secrets.GITHUB_TOKEN }}
-          tag: "latest"
+          tag: ${{ github.event.inputs.tagName }}
           artifacts: "youtube-work-overtime.zip"
