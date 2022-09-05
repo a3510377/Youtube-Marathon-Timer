@@ -42,8 +42,18 @@ jobs:
 
       - name: upload Release
         uses: ncipollo/release-action@v1
+        if: ${{ inputs.tagName }}
         with:
           allowUpdates: true
           token: ${{ secrets.GITHUB_TOKEN }}
-          tag: ${{ inputs.tagName || "latest" }}
+          tag: ${{ inputs.tagName }}
+          artifacts: "youtube-work-overtime.zip"
+
+      - name: upload Release
+        uses: ncipollo/release-action@v1
+        if: ${{ !inputs.tagName }}
+        with:
+          allowUpdates: true
+          token: ${{ secrets.GITHUB_TOKEN }}
+          tag: "latest"
           artifacts: "youtube-work-overtime.zip"
