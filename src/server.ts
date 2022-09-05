@@ -115,7 +115,7 @@ server
 
     switch (error.code) {
       case "EACCES":
-        console.error(`${bind} 需要更高全縣`);
+        console.error(`${bind} 需要更高權限`);
         process.exit(1);
         break;
       case "EADDRINUSE":
