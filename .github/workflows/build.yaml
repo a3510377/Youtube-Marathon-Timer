@@ -10,6 +10,7 @@ on:
       tagName:
         description: "Release version tag name"
         required: false
+        default: "latest"
 
 jobs:
   deploy:
