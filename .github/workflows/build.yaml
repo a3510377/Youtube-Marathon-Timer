@@ -21,10 +21,10 @@ jobs:
       - name: init server
         run: |
           yarn --prod --silent
-          mkdir -p server
-          cp -r node_modules server
-          cp -r build/* server
-          echo "start server/start.bat" > start.bat
+          mkdir -p dist
+          cp -r node_modules dist
+          cp -r build/* dist
+          echo "start dist/start.bat" > start.bat
 
       - name: build
         run: |
@@ -33,7 +33,7 @@ jobs:
 
       - name: build to zip
         run: |
-          zip -r youtube-work-overtime server/* public/* start.bat || echo "build to zip error"
+          zip -r youtube-work-overtime dist/* public/* start.bat || echo "build to zip error"
 
       - name: upload Release
         uses: ncipollo/release-action@v1
