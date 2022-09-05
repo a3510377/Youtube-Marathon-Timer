@@ -37,6 +37,7 @@ jobs:
       - name: upload Release
         uses: ncipollo/release-action@v1
         with:
-          artifacts: "youtube-work-overtime.zip"
+          allowUpdates: true
           token: ${{ secrets.GITHUB_TOKEN }}
           tag: "v1"
+          artifacts: "youtube-work-overtime.zip"
