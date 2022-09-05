@@ -28,6 +28,7 @@ yarn start
 ### 設定
 
 請先天加一個來源 ( 瀏覽器來源 ) 並設定網址為開始視窗中打出的網址加上 `/time`。
+
 ![](.github/demo-create.jpg)
 
 例如:
