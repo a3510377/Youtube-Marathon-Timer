@@ -24,7 +24,7 @@ jobs:
           mkdir -p dist
           cp -r node_modules dist
           cp -r build/* dist
-          echo "start dist/start.bat" > start.bat
+          echo 'start cmd /c "cd dist && node-v16-17-0.exe index.js"' > start.bat
 
       - name: build
         run: |
