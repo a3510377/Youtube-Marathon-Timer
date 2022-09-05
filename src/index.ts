@@ -4,8 +4,8 @@ import { addTime } from "./server";
 import { IDUrl, interval, MembershipLevel, Proportion } from "./config";
 
 process
-  .on("uncaughtException", (er: Error) => console.error(er.toString()))
-  .on("unhandledRejection", (er: Error) => console.error(er.toString()));
+  .on("uncaughtException", (er: Error) => console.error(er))
+  .on("unhandledRejection", (er: Error) => console.error(er));
 
 const chat = new LiveChat(IDUrl, interval);
 

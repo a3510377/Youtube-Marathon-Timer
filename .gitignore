@@ -129,3 +129,4 @@ dist
 .vite-ssg-temp
 
 tmp
+config.yml

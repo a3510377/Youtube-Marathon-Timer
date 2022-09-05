@@ -1,8 +1,20 @@
+import fs from "fs";
+import path from "path";
+
 import jsYml from "js-yaml";
 
 import { regexEscape, timeCalc } from "./utils";
 
-const config = <ConfigType>jsYml.load("config.yml");
+const config = <ConfigType>{};
+const defaultConfig = fs
+  .readFileSync(path.join(__dirname, "utils", "config.yml"))
+  .toString();
+try {
+  Object.assign(config, jsYml.load(fs.readFileSync("config.yml", "utf8")));
+} catch {
+  fs.writeFileSync("config.yml", defaultConfig, { encoding: "utf8" });
+}
+Object.assign(config, jsYml.load(defaultConfig));
 
 /**間隔獲取最新訊息 (ms) */
 export const interval = config.interval;
