@@ -246,3 +246,26 @@ export const AreaToCurrency: Record<string, string> = {
   ZM: "ZMW",
   ZW: "ZWL",
 };
+
+export const defaultConfig = `# 獲取最新訊息間隔 (ms)
+interval: 1000
+
+# 頻道或直播網址
+IDUrl: https://www.youtube.com/channel/UC9YOQFPfEUXbulKDtxeqqBA
+
+# 地區(匯率換算使用) https://api.exchangerate.host/latest
+AREA: TWD
+
+# 超級留言每元添加加班時間比
+# ex: 1元 = 1分鐘, 2元 = 2分鐘
+Proportion: 1000
+
+# 加入會員添加加班時間
+# ex: 白銀臥胡 = 2.5分鐘
+MembershipLevel:
+  - 白銀臥胡: 2.5m
+  - 黃金臥胡: 10m
+  - 鉑金臥胡: 25m
+  - 鑽石臥胡: 65m
+  - 傳說臥胡: 130m
+`;
