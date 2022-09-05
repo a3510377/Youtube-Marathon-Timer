@@ -24,7 +24,6 @@ jobs:
           mkdir -p server
           cp -r node_modules server
           cp -r build/* server
-          cp -r public
           echo "start server/start.bat" > start.bat
 
       - name: build
