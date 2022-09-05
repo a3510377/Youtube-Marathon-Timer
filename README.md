@@ -29,19 +29,19 @@ yarn start
 
 請先天加一個來源 ( 瀏覽器來源 ) 並設定網址為開始視窗中打出的網址加上 `/time`。
 
-![](.github/demo-create.jpg)
+![](docs/demo-create.jpg)
 
 例如:
 視窗中顯示的網址為: `http://localhost:5090`
 請在網址後加上: `/time`
 
-![](.github/obs-set.jpg)
+![](docs/obs-set.jpg)
 
 ### 自訂設定
 
 如果你需要綠幕的版本可以在網址後加上 `?green` 即可。 ex: `http://localhost:5090/time?green`
 
-![](.github/obs-green.jpg)
+![](docs/obs-green.jpg)
 
 或者你也可以自訂文字及背景顏色 可以在 OBS 對應的來源屬性中找到 `自訂 CSS` 可以打入。
 
@@ -52,11 +52,11 @@ yarn start
 }
 ```
 
-![](.github/obs-custom.png)
+![](docs/obs-custom.png)
 
 ## 網頁設定
 
 請在瀏覽器網址處打上 `http://localhost:5090` ( 如果該網址被占用 系統會嘗試使用其他網址請查看視窗中的訊息 )。
 你會看到如下圖所示的設定介面按下上方的按鈕既可。
 
-![](.github/web-config-page.jpg)
+![](docs/web-config-page.jpg)
