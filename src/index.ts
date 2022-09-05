@@ -29,7 +29,7 @@ chat
     if (!baseAmountValue) return;
 
     console.log(
-      "新的超級訊息:",
+      "新的超級留言:",
       `${currency ? currency + " " : ""}${amountValue} ->`,
       baseAmountValue
     );
