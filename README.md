@@ -53,3 +53,10 @@ yarn start
 ```
 
 ![](.github/obs-custom.png)
+
+## 網頁設定
+
+請在瀏覽器網址處打上 `http://localhost:5090` ( 如果該網址被占用 系統會嘗試使用其他網址請查看視窗中的訊息 )。
+你會看到如下圖所示的設定介面按下上方的按鈕既可。
+
+![](.github/web-config-page.jpg)
