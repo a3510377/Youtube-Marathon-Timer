@@ -40,6 +40,7 @@ yarn start
 ### 自訂設定
 
 如果你需要綠幕的版本可以在網址後加上 `?green` 即可。 ex: `http://localhost:5090/time?green`
+
 ![](.github/obs-green.jpg)
 
 或者你也可以自訂文字及背景顏色 可以在 OBS 對應的來源屬性中找到 `自訂 CSS` 可以打入。
