@@ -40,5 +40,5 @@ jobs:
         with:
           allowUpdates: true
           token: ${{ secrets.GITHUB_TOKEN }}
-          tag: "v1"
+          tag: "latest"
           artifacts: "youtube-work-overtime.zip"
