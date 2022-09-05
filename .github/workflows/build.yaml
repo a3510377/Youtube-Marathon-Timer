@@ -23,7 +23,7 @@ jobs:
           yarn --prod --silent
           mkdir -p dist
           cp -r node_modules dist
-          cp -r build dist
+          cp -r build/* dist
 
       - name: build
         run: |
@@ -32,7 +32,7 @@ jobs:
 
       - name: build to zip
         run: |
-          zip -r youtube-work-overtime dist || echo "build to zip error"
+          zip -r youtube-work-overtime dist/* || echo "build to zip error"
 
       - name: upload Release
         uses: ncipollo/release-action@v1
