@@ -52,4 +52,4 @@ yarn start
 }
 ```
 
-![](.github/obs-set.jpg)
+![](.github/obs-custom.jpg)
