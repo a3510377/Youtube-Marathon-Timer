@@ -12,7 +12,8 @@
     "noUnusedParameters": true,
     "experimentalDecorators": true,
     "outDir": "./dist",
-    "strict": true
+    "strict": true,
+    "noImplicitAny": false
   },
   "include": ["src"]
 }

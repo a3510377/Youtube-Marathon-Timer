@@ -1,3 +1,4 @@
+import stringMath from "string-math";
 import { NextFunction, Request, Response } from "express";
 
 export const second = 1e3;
@@ -61,7 +62,7 @@ export const timeCalc = (text: string) => {
     text = text.replace(key, `*${value}`);
   });
 
-  return 0;
+  return stringMath(text);
 };
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any

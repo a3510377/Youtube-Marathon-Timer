@@ -1532,6 +1532,11 @@ statuses@2.0.1:
   resolved "https://registry.yarnpkg.com/statuses/-/statuses-2.0.1.tgz#55cb000ccf1d48728bd23c685a063998cf1a1b63"
   integrity sha512-RwNA9Z/7PrK06rYLIzFMlaF+l73iwpzsqRIFgbMLbTcLD6cOao82TaWefPXQvB2fOC4AjuYSEndS7N/mTCbkdQ==
 
+string-math@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/string-math/-/string-math-1.2.2.tgz#c6a9362fac81476092f6f920e5379df00313c1e3"
+  integrity sha512-rfRZpMZbIy+0pepaW8iDCR+iW+GONxyi0jXfdyW4MgpFATH/Vlz+d3vt8UMu/a1RjA9xiejBDFayvTXzs/ROTw==
+
 strip-ansi@^6.0.1:
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/strip-ansi/-/strip-ansi-6.0.1.tgz#9e26c63d30f53443e9489495b2105d37b67a85d9"
