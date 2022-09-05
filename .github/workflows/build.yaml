@@ -38,7 +38,7 @@ jobs:
 
       - name: build to zip
         run: |
-          zip -r youtube-work-overtime dist/* public/* start.bat || echo "build to zip error"
+          zip -r Youtube-Marathon-Timer dist/* public/* start.bat || echo "build to zip error"
 
       - name: upload Release
         uses: ncipollo/release-action@v1
@@ -47,7 +47,7 @@ jobs:
           allowUpdates: true
           token: ${{ secrets.GITHUB_TOKEN }}
           tag: ${{ inputs.tagName }}
-          artifacts: "youtube-work-overtime.zip"
+          artifacts: "Youtube-Marathon-Timer.zip"
 
       - name: upload Release
         uses: ncipollo/release-action@v1
@@ -56,4 +56,4 @@ jobs:
           allowUpdates: true
           token: ${{ secrets.GITHUB_TOKEN }}
           tag: "latest"
-          artifacts: "youtube-work-overtime.zip"
+          artifacts: "Youtube-Marathon-Timer.zip"
