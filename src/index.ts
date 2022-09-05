@@ -17,9 +17,12 @@ chat
         .join("")}`
     );
   })
-  .on("newMembership", (data) => {
-    console.log(data);
-    addTime(`+:${MembershipLevel?.[data.MembershipType] || 0}`);
+  .on("newMembership", ({ MembershipType }) => {
+    if (!MembershipType) return;
+
+    console.log("新的會員:", MembershipType);
+
+    addTime(`+:${MembershipLevel?.[MembershipType] || 0}`);
   })
   .on("newPaidMessage", ({ currency, amountValue, baseAmountValue }) => {
     // 我懶所以多寫 if 一次不過沒差

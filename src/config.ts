@@ -1,15 +1,18 @@
 import fs from "fs";
 
 import jsYml from "js-yaml";
+import path from "path";
 
 import { regexEscape, timeCalc } from "./utils";
 import { defaultConfig } from "./utils/data";
 
 const config = <ConfigType>{};
+const configFile = path.join(__dirname, "..", "config.yml");
+
 try {
-  Object.assign(config, jsYml.load(fs.readFileSync("config.yml", "utf8")));
+  Object.assign(config, jsYml.load(fs.readFileSync(configFile, "utf8")));
 } catch {
-  fs.writeFileSync("config.yml", defaultConfig, { encoding: "utf8" });
+  fs.writeFileSync(configFile, defaultConfig, { encoding: "utf8" });
 }
 Object.assign(config, jsYml.load(defaultConfig));
 
