@@ -1,10 +1,11 @@
 {
-  "name": "Youtube-Marathon-Timer",
+  "name": "youtube-marathon-timer",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/a3510377/youtube-work-overtime.git",
+  "repository": "https://github.com/a3510377/Youtube-Marathon-Timer.git",
   "author": "猴子 <a102009102009@gmail.com>",
   "license": "MIT",
+  "private": true,
   "scripts": {
     "dev": "ts-node ./src",
     "build": "tsc --build --clean && tsc --build",

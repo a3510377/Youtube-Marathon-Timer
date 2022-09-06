@@ -13,10 +13,10 @@ yarn build
 yarn start
 ```
 
-1. 先行版: [點我下載](https://github.com/a3510377/youtube-work-overtime/releases/download/latest/Youtube-Marathon-Timer.zip)
-2. v1.0.0: [點我下載](https://github.com/a3510377/youtube-work-overtime/releases/download/v1.0.0/Youtube-Marathon-Timer.zip)
+1. 先行版: [點我下載](https://github.com/a3510377/Youtube-Marathon-Timer/releases/download/latest/Youtube-Marathon-Timer.zip)
+2. v1.0.0: [點我下載](https://github.com/a3510377/Youtube-Marathon-Timer/releases/download/v1.0.0/Youtube-Marathon-Timer.zip)
 
-[其它版本](https://github.com/a3510377/youtube-work-overtime/releases)
+[其它版本](https://github.com/a3510377/Youtube-Marathon-Timer/releases)
 
 ## 使用
 
