@@ -63,5 +63,6 @@ yarn start
 
 ## 免責聲明
 
-該系統使用 youtube 生產版本 API 無向 youtube 申請，不保證 API 長久可用。
-該項目僅進行開發及分享如遇法律問提請自行解決，該項目不承擔任何責任。如遇 `bug` 請至 [issues](https://github.com/a3510377/Youtube-Marathon-Timer/issues) 提問如 bug 影響您的權益該項目不承擔任何責任。
+1. 該系統使用 youtube 生產版本 API 無向 youtube 申請，不保證 API 長久可用。
+2. 該項目僅進行開發及分享如遇法律問提請自行解決，該項目不承擔任何責任。
+3. 如遇 `bug` 請至 [issues](https://github.com/a3510377/Youtube-Marathon-Timer/issues) 提問如 bug 影響您的權益該項目不承擔任何責任。
