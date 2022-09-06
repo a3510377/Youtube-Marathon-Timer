@@ -152,22 +152,28 @@ export const parseChat = async (
   exchange: Record<string, number>
 ) => {
   const {
+    continuationContents: {
+      liveChatContinuation: {
+        actions,
+        continuations: [continuationData],
+      },
+    },
+  } = data;
+  const {
     data: { rates },
   } = await axios.get(`https://api.exchangerate.host/latest?base=${AREA}`);
   exchange = <typeof exchange>rates;
 
   /* continuation */
-  const [continuationData] =
-    data.continuationContents.liveChatContinuation.continuations;
-
   const continuation =
     continuationData.invalidationContinuationData?.continuation ??
     continuationData.timedContinuationData?.continuation ??
     "";
 
+  const actionChatItemAction = actions?.[0].addChatItemAction?.item;
   /* MembershipMessage */
   const MembershipMessage =
-    data.continuationContents.liveChatContinuation.actions?.[0].addChatItemAction?.item.liveChatMembershipItemRenderer?.headerSubtext.runs
+    actionChatItemAction?.liveChatMembershipItemRenderer?.headerSubtext.runs
       .map((_) => "text" in _ && _.text)
       .join("");
 
@@ -176,8 +182,7 @@ export const parseChat = async (
 
   /* ChatPaidMessage */
   const ChatPaidMessage =
-    data.continuationContents.liveChatContinuation.actions?.[0]
-      .addChatItemAction?.item.liveChatPaidMessageRenderer?.purchaseAmountText
+    actionChatItemAction?.liveChatPaidMessageRenderer?.purchaseAmountText
       .simpleText;
   const [, currency, amountValue] =
     ChatPaidMessage?.replace("$", "").match(/([a-zA-Z-_]+?) *([0-9.]+)/) || [];
