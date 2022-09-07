@@ -57,3 +57,4 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           tag: "latest"
           artifacts: "Youtube-Marathon-Timer.zip"
+          replacesArtifacts: true
